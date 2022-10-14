@@ -1,0 +1,20 @@
+{
+	"name": "andros",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ShamankaFE/Andros.git"
+	},
+	"author": "Shamanka FE",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/ShamankaFE/Andros/issues"
+	},
+	"homepage": "https://github.com/ShamankaFE/Andros#readme",
+	"dependencies": {}
+}

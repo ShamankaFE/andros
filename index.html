@@ -10,38 +10,42 @@
 </head>
 
 <body class="page-body">
-	<header class="page-header ">
-		<div class="page-header__logo site-logo">
-			<a href="index.html">Adros<span>.</span></a>
+	<header class="page-header">
+		<div class="page-header--top _wrap">
+			<div class="page-header__logo">
+				<h1><a class="site-logo" href="index.html">Adros<span class="accent">.</span></a></h1>
+			</div>
+
+			<nav class="page-header__nav site-nav">
+				<a class="site-nav__toggle" href="#">MENU</a>
+				<ul class="site-nav__links" hidden>
+					<li><a class="site-nav__link" href="#">Home</a></li>
+					<li><a class="site-nav__link" href="#">Articles</a></liclass=>
+					<li><a class="site-nav__link" href="#">Learn Your Style</a></li>
+					<li><a class="site-nav__link" href="#">Inspiration</a></li>
+					<li><a class="site-nav__link" href="#">Gallery</a></li>
+					<li><a class="site-nav__link" href="#">Research</a></li>
+					<li><a class="site-nav__link" href="#">Quizzz</a></li>
+					<li><a class="site-nav__link" href="#">Contact</a></li>
+				</ul>
+			</nav>
 		</div>
 
-		<nav class="page-header__nav site-nav">
-			<a class="site-nav__toggle" href="#">MENU</a>
-			<ul class="site-nav__links" hidden>
-				<li><a class="site-nav__link" href="#">Home</a></li>
-				<li><a class="site-nav__link" href="#">Articles</a></liclass=>
-				<li><a class="site-nav__link" href="#">Learn Your Style</a></li>
-				<li><a class="site-nav__link" href="#">Inspiration</a></li>
-				<li><a class="site-nav__link" href="#">Gallery</a></li>
-				<li><a class="site-nav__link" href="#">Research</a></li>
-				<li><a class="site-nav__link" href="#">Quizzz</a></li>
-				<li><a class="site-nav__link" href="#">Contact</a></li>
-			</ul>
-		</nav>
-		<div class="hero">
-			<div class="hero__slider slider">
-				<img src="img/glint_hero_1.jpg" alt="adult learners involved">
+		<div class="hero _wrap">
+			<div class="hero__slider">
+				<img class="slider__image" src="img/main_hero_1.jpg" alt="adult learners involved">
 			</div>
 			<div class="hero__text">
 				<div class="hero__title">
-					<h1 class="headline">Adult Learning</h1>
+					<!-- <h1>Grunt Studio</h1> -->
+					<h1><span class="accent">A</span>dult <span class="accent">L</span>earning</h1>
 				</div>
 				<div class="hero__welcome">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos id eaque, modi itaque autem commodi dolor
 					cum ipsa esse sit beatae, minus hic corrupti voluptates repellat enim officia, officiis tempora.
 				</div>
-				<div class="hero__button">
-					<a class="btn" href="#">What is Andragogy</a>
+				<div class="hero__buttons button-box">
+					<a class="hero__button" href="#">What is Andragogy</a>
 				</div>
 			</div>
 		</div>
@@ -49,13 +53,13 @@
 
 	<main class="main">
 		<div class="wrapper">
-			<section class="read-block ">
+			<section class="read-block section _wrap">
 				<div class="read-block__title section__title">
 					<p class="subtitle">Learn for better Learning</p>
 					<h2 class="title">Adults need to know how, what and why</h2>
 				</div>
 
-				<div class="articles ">
+				<div class="articles">
 					<div class="article">
 						<h4 class="article__title">Who is Adult Learner: traits</h4>
 						<div class="article__excerpt">
@@ -66,7 +70,7 @@
 						<a class="article__link" href="#">Learn more</a>
 					</div>
 					<div class="article">
-						<h4 class="article__title">Adult Learning Theory: basics</h4>
+						<h4 class="article__title">Adult Learning Theory</h4>
 						<div class="article__excerpt">
 							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed recusandae vel laboriosam, ducimus
 							unde
@@ -76,7 +80,7 @@
 						<a class="article__link" href="#">Learn more</a>
 					</div>
 					<div class="article">
-						<h4 class="article__title">Learning models and processes: how to</h4>
+						<h4 class="article__title">Learning models</h4>
 						<div class="article__excerpt">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam vitae rerum, ipsam possimus
 							excepturi numquam laudantium dolorem asperiores eligendi vel fuga, perspiciatis fugiat laborum esse
@@ -115,49 +119,49 @@
 				</div>
 			</section>
 
-			<section class="test-block ">
+			<section class="test-block section _wrap">
 				<div class="test__image">
-					<img src="img/glint_about_1.jpg" alt="">
+					<img class="image-test" src="img/main_test.jpg" alt="test online, learning style test">
 				</div>
-				<div class="test-block__title section__title">
-					<p class="subtitle">Test Yourself</p>
-					<h2 class="title">Personal Learning Style</h2>
-				</div>
-				<div class="test__excerpt">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut non voluptatibus harum nihil dolore impedit,
-					quae obcaecati delectus fugiat odio facere consequuntur natus esse recusandae commodi quos nemo culpa
-					ullam.
-				</div>
-				<div class="test__list list">
-					<ul class="list__items">
-						<li class="list__item">Activist</li>
-						<li class="list__item">Theorist</li>
-						<li class="list__item">Reflector</li>
-						<li class="list__item">Pragmatist</li>
-					</ul>
-				</div>
-				<div class="test__button">
-					<a class="btn" href="#">Discover</a>
-				</div>
-				<div class="video-link">
-					<a class="link" href="#">Watch video</a>
+				<div class="test__content">
+					<div class="test-block__title section__title">
+						<p class="subtitle">Test Yourself</p>
+						<h2 class="title ">Personal Learning Style</h2>
+					</div>
+					<div class="test__excerpt">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut non voluptatibus harum nihil dolore
+						impedit,
+						quae obcaecati delectus fugiat odio facere consequuntur natus esse recusandae commodi quos nemo culpa
+						ullam.
+					</div>
+					<div class="test__list">
+						<ul class="list__items">
+							<li class="list__item">Activist</li>
+							<li class="list__item">Theorist</li>
+							<li class="list__item">Reflector</li>
+							<li class="list__item">Pragmatist</li>
+						</ul>
+					</div>
+					<div class="button-box">
+						<a class="button button--test" href="#">Discover</a>
+						<a class="button button--link" href="#">Watch video</a>
+					</div>
+
 				</div>
 			</section>
 
-			<section class="inspire-block ">
+			<section class="inspire-block section">
 				<div class="inspire-block__title section__title">
 					<p class="subtitle">Inspiration</p>
 					<h2 class="title">Time to listen to great minds and try it on your skin</h2>
 				</div>
-				<div class="quote-section">
+				<div class="quote-section _wrap">
 					<div class="quote-block">
 						<div class="quote-block__image">
-							<img src="" alt="">
+							<img class="image-block" src="img/main_quote_1.jpg" alt="">
 						</div>
 						<div class="quote-block__desc">
-							<div class="quote-block__title">
-								<h3>Learning is good</h3>
-							</div>
+							<h3 class="quote-block__title">Learning is good</h3>
 							<div class="quote-block__slogan">
 								Learning is something that takes place daily by interacting with other people and the world
 								around
@@ -170,30 +174,41 @@
 
 							<div class="quote">
 								<div class="quote__text">
-									We now accept the fact that learning is a lifelong process of keeping abreast of change. And
+									We now accept the fact that learning is a <span class="mark">lifelong process of keeping
+										abreast of change.</span> And
 									the
-									most pressing task is
 									to teach people how to learn.
 								</div>
-								<div class="quote__author author">
-									<div class="author__pic">
-										<img src="" alt="">
-									</div>
-									<div class="author__name">
-										Peter Drucker
-									</div>
+								<div class="author__name">
+									Peter Drucker
 								</div>
 							</div>
-
-							<div class="quote-block__link">
-								<a href="link-page">Get more quotes</a>
+							<div class="">
+								<a class="article__link quote-block__link" href="link-page">Get more quotes</a>
+							</div>
+							<div class="quote" hidden>
+								<div class="quote__text">
+									The beautiful thing about learning is <span class="mark">nobody can take it away from
+										you.</span>
+								</div>
+								<div class="author__name">
+									B.B. King
+								</div>
+							</div>
+							<div class="quote" hidden>
+								<div class="quote__text">
+									<span class="mark">Wisdom…. comes not from age, but from education and learning.</span>
+								</div>
+								<div class="author__name">
+									Anton Chekhov
+								</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="quote-block ">
+					<div class="quote-block  quote-block--reversed">
 						<div class="quote-block__image">
-							<img src="" alt="">
+							<img class="image-block" src="img/main_quote_2.jpg" alt="">
 						</div>
 						<div class="quote-block__desc">
 							<div class="quote-block__title">
@@ -212,29 +227,44 @@
 
 							<div class="quote">
 								<div class="quote__text">
-									The purpose of learning is growth, and our minds, unlike our bodies, can continue growing as
-									we
-									continue to live.
+									The purpose of learning is growth, and <span class="mark">our minds, unlike our bodies, can
+										continue growing as
+										we
+										continue to live.</span>
 								</div>
-								<div class="quote__author author">
-									<div class="author__pic">
-										<img src="" alt="">
-									</div>
-									<div class="author__name">
-										Mortimer Adler
-									</div>
+								<div class="author__name">
+									Mortimer Adler
 								</div>
 							</div>
 
-							<div class="quote-block__link">
-								<a href="link-page">Get more quotes</a>
+							<div class="">
+								<a class="article__link quote-block__link" href="link-page">Get more quotes</a>
 							</div>
+
+							<div class="quote" hidden>
+								<div class="quote__text">
+									You'll never know everything about anything, <span class="mark">especially something you
+										love</span>.
+								</div>
+								<div class="author__name">
+									Julia Child
+								</div>
+							</div>
+							<div class="quote" hidden>
+								<div class="quote__text">
+									I am learning all the time. <span class="mark">The tombstone will be my diploma</span>.
+								</div>
+								<div class="author__name">
+									Eartha Kitt
+								</div>
+							</div>
+
 						</div>
 					</div>
 
 					<div class="quote-block">
 						<div class="quote-block__image">
-							<img src="" alt="">
+							<img class="image-block" src="img/main_quote_3.jpg" alt="">
 						</div>
 						<div class="quote-block__desc">
 							<div class="quote-block__title">
@@ -252,10 +282,11 @@
 
 							<div class="quote">
 								<div class="quote__text">
-									Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most
-									of
-									all, love of what you
-									are doing or learning to do.
+									Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and
+									<span class="mark">most
+										of
+										all, love of what you
+										are doing or learning to do.</span>
 								</div>
 								<div class="quote__author author">
 									<div class="author__pic">
@@ -267,15 +298,34 @@
 								</div>
 							</div>
 
-							<div class="quote-block__link">
-								<a href="link-page">Get more quotes</a>
+							<div class="">
+								<a class="article__link quote-block__link" href="link-page">Get more quotes</a>
 							</div>
+
+							<div class="quote">
+								<div class="quote__text">
+									A good teacher can inspire hope, ignite the imagination, and <span class="mark">instill a
+										love of learning</span>.
+								</div>
+								<div class="author__name">
+									Brad Henry
+								</div>
+							</div>
+							<div class="quote">
+								<div class="quote__text">
+									A ‘genius’ is often merely a talented person who has done all of his or her homework.
+								</div>
+								<div class="author__name">
+									Thomas Edison
+								</div>
+							</div>
+
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="gallery-block ">
+			<section class="gallery-block section _wrap">
 				<div class="gallery-block__title section__title">
 					<p class="subtitle">Gallery</p>
 					<h2 class="title">Mindmapping about Adult Learning</h2>
@@ -290,7 +340,7 @@
 				</div>
 			</section>
 
-			<section class="search-block ">
+			<section class="search-block section">
 				<div class="search-block__title section__title">
 					<p class="subtitle">Search</p>
 					<h2 class="title">Become learning-friendly with those concepts</h2>
@@ -300,44 +350,47 @@
 	</main>
 
 	<footer class="footer">
-		<div class="contact-block">
-			<div class="contact-block__title footer__title">
-				<h4 class="title">Contact</h4>
+		<div class="footer__content _wrap">
+			<div class="contact-block">
+				<div class="contact-block__title footer__title">
+					<h4 class="title">Contact</h4>
+				</div>
+				<div class="contact__text">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt amet nam laboriosam minima id nemo
+					quibusdam dignissimos doloribus velit cum? Iure id quas nulla vero quisquam? Officiis adipisci molestias
+					dolor!
+				</div>
+				<div class="contact__social">
+					<a class="link-social" href="#"><img src="" alt=""></a>
+				</div>
 			</div>
-			<div class="contact__text">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt amet nam laboriosam minima id nemo
-				quibusdam dignissimos doloribus velit cum? Iure id quas nulla vero quisquam? Officiis adipisci molestias
-				dolor!
-			</div>
-			<div class="contact__social">
-				<a class="link-social" href="#"><img src="" alt=""></a>
-			</div>
-		</div>
 
-		<div class="nav-block">
-			<div class="nav-block__title footer__title">
-				<h4 class="title">Navigation</h4>
+			<div class="nav-block">
+				<div class="nav-block__title footer__title">
+					<h4 class="title">Navigation</h4>
+				</div>
+				<div class="footer__nav">
+					<ul class="footer__nav__links">
+						<li><a class="footer__nav__link" href="#">Home</a></li>
+						<li><a class="footer__nav__link" href="#">Articles</a></liclass=>
+						<li><a class="footer__nav__link" href="#">Learn Your Style</a></li>
+						<li><a class="footer__nav__link" href="#">Inspiration</a></li>
+						<li><a class="footer__nav__link" href="#">Gallery</a></li>
+						<li><a class="footer__nav__link" href="#">Research</a></li>
+						<li><a class="footer__nav__link" href="#">Quizzz</a></li>
+						<li><a class="footer__nav__link" href="#">Contact</a></li>
+					</ul>
+				</div>
 			</div>
-			<div class="footer__nav">
-				<ul class="footer__nav__links">
-					<li><a class="footer__nav__link" href="#">Home</a></li>
-					<li><a class="footer__nav__link" href="#">Articles</a></liclass=>
-					<li><a class="footer__nav__link" href="#">Learn Your Style</a></li>
-					<li><a class="footer__nav__link" href="#">Inspiration</a></li>
-					<li><a class="footer__nav__link" href="#">Gallery</a></li>
-					<li><a class="footer__nav__link" href="#">Research</a></li>
-					<li><a class="footer__nav__link" href="#">Quizzz</a></li>
-					<li><a class="footer__nav__link" href="#">Contact</a></li>
-				</ul>
-			</div>
-		</div>
 
-		<div class="subscribe-block">
-			<div class="subscribe-block__title footer__title">
-				<h4 class="title">Subscribe</h4>
+			<div class="subscribe-block">
+				<div class="subscribe-block__title footer__title">
+					<h4 class="title">Subscribe</h4>
+				</div>
+				<div class="subscribe-form">
+				</div>
 			</div>
-			<div class="subscribe-form">
-			</div>
+
 		</div>
 	</footer>
 </body>
