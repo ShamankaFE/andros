@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
+	<!-- <link rel="stylesheet" href="assets/fontawesome-free-5.15.4-web/css/fontawesome.min.css"> -->
 	<title>Andros - Adult Learning and Adult Learners</title>
 </head>
 
@@ -16,21 +17,34 @@
 				<h1><a class="site-logo" href="index.html">Adros<span class="accent">.</span></a></h1>
 			</div>
 
-			<nav class="page-header__nav site-nav">
-				<a class="site-nav__toggle" href="#">MENU</a>
-				<ul class="site-nav__links" hidden>
-					<li><a class="site-nav__link" href="#">Home</a></li>
-					<li><a class="site-nav__link" href="#">Articles</a></liclass=>
-					<li><a class="site-nav__link" href="#">Learn Your Style</a></li>
-					<li><a class="site-nav__link" href="#">Inspiration</a></li>
-					<li><a class="site-nav__link" href="#">Gallery</a></li>
-					<li><a class="site-nav__link" href="#">Research</a></li>
-					<li><a class="site-nav__link" href="#">Quizzz</a></li>
-					<li><a class="site-nav__link" href="#">Contact</a></li>
-				</ul>
-			</nav>
+			<div class="page-header__nav">
+				<input class="site-nav__toggle" type="checkbox" id="menu">
+				<label class="site-nav__label open" for="menu">
+					<!-- <i class="fas fa-bars"></i> -->
+					<img src="assets/fontawesome-free-5.15.4-web/svgs/solid/bars.svg" alt="" width="24">
+				</label>
+				<nav class="site-nav">
+					<ul class="site-nav__links">
+						<li><a class="site-nav__link" href="index.html">Home</a></li>
+						<li><a class="site-nav__link" href="index.html#articles">Articles</a></liclass=>
+						<li><a class="site-nav__link" href="index.html#test">Learn Your Style</a></li>
+						<li><a class="site-nav__link" href="index.html#quotes">Inspiration</a></li>
+						<li><a class="site-nav__link" href="index.html#mindmaps">Mindmaps</a></li>
+						<li><a class="site-nav__link" href="#">Research</a></li>
+						<li><a class="site-nav__link" href="#">Quizzz</a></li>
+						<li><a class="site-nav__link" href="index.html#contact">Contact</a></li>
+					</ul>
+					<label class="site-nav__label close" for="menu">
+						<!-- <i class="fa fa-times"></i> -->
+						<img src="assets/fontawesome-free-5.15.4-web/svgs/solid/times.svg" alt="" width="24">
+					</label>
+				</nav>
+			</div>
 		</div>
 
+	</header>
+
+	<main class="main">
 		<div class="hero _wrap">
 			<div class="hero__slider">
 				<img class="slider__image" src="img/main_hero_1.jpg" alt="adult learners involved">
@@ -41,19 +55,20 @@
 					<h1><span class="accent">A</span>dult <span class="accent">L</span>earning</h1>
 				</div>
 				<div class="hero__welcome">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos id eaque, modi itaque autem commodi dolor
-					cum ipsa esse sit beatae, minus hic corrupti voluptates repellat enim officia, officiis tempora.
+					As adults, we need to know why we need to learn something before undertaking to learn it. We need to
+					know how
+					learning will be conducted, what learning will occur and why learning this is important personally to us.
+					There is a whole science around it. Welcome to the resource platform designed for
+					adult learners and their teachers.
 				</div>
 				<div class="hero__buttons button-box">
 					<a class="hero__button" href="#">What is Andragogy</a>
 				</div>
 			</div>
 		</div>
-	</header>
 
-	<main class="main">
 		<div class="wrapper">
-			<section class="read-block section _wrap">
+			<section class="read-block section _wrap" id="articles">
 				<div class="read-block__title section__title">
 					<p class="subtitle">Learn for better Learning</p>
 					<h2 class="title">Adults need to know how, what and why</h2>
@@ -119,7 +134,7 @@
 				</div>
 			</section>
 
-			<section class="test-block section _wrap">
+			<section class="test-block section _wrap" id="test">
 				<div class="test__image">
 					<img class="image-test" src="img/main_test.jpg" alt="test online, learning style test">
 				</div>
@@ -150,7 +165,7 @@
 				</div>
 			</section>
 
-			<section class="inspire-block section">
+			<section class="inspire-block section" id="quotes">
 				<div class="inspire-block__title section__title">
 					<p class="subtitle">Inspiration</p>
 					<h2 class="title">Time to listen to great minds and try it on your skin</h2>
@@ -325,7 +340,7 @@
 				</div>
 			</section>
 
-			<section class="gallery-block section _wrap">
+			<section class="gallery-block section _wrap" id="mindmaps">
 				<div class="gallery-block__title section__title">
 					<p class="subtitle">Gallery</p>
 					<h2 class="title">Mindmapping about Adult Learning</h2>
@@ -386,20 +401,21 @@
 		<div class="footer__content _wrap">
 			<div class="footer__blocks">
 				<div class="contact-block footer__column">
-					<div class="contact-block__title">
+					<div class="contact-block__title" id="contact">
 						<h4 class="title  footer__title">Contact</h4>
 					</div>
 					<div class="contact__text">
-						<p>Thank you for showing your interest to my project dedicated to the Adult Learning psychology and
-							art. It
+						<p>Thank you for showing your interest to the Adult Learning psychology. This project
 							was
-							created in the process of self-directed learning process too. Never forget to love what you do as I
-							love to create modern and useful web-applications and websites in the kelping and educational
-							field.
+							created in the process of self-directed learning too. Always remember to love what you do as I
+							love to create modern and useful websites in the helping and educational
+							fields.
 						</p>
-						<div class="author__name">
-							Svetlana Groiss aka Shamanka FE. Here is my <a class="accent" href="#">LinkedIn profile.</a>
-						</div>
+					</div>
+					<div class="avatar">
+						<img class="avatar__photo" src="img/shamankafe_300.png" alt="" width="80">
+						<p class="avatar__text">Svetlana Groiss aka ShamankaFE. Here is my <a class="accent" href="#">LinkedIn
+								profile.</a></p>
 					</div>
 				</div>
 
@@ -409,14 +425,14 @@
 					</div>
 					<div class="footer__nav">
 						<ul class="footer__nav__links">
-							<li><a class="footer__nav__link" href="#">Home</a></li>
-							<li><a class="footer__nav__link" href="#">Articles</a></liclass=>
-							<li><a class="footer__nav__link" href="#">Learn Your Style</a></li>
-							<li><a class="footer__nav__link" href="#">Inspiration</a></li>
-							<li><a class="footer__nav__link" href="#">Gallery</a></li>
+							<li><a class="footer__nav__link" href="index.html">Home</a></li>
+							<li><a class="footer__nav__link" href="index.html#articles">Articles</a></liclass=>
+							<li><a class="footer__nav__link" href="index.html#test">Learn Your Style</a></li>
+							<li><a class="footer__nav__link" href="index.html#quotes">Inspiration</a></li>
+							<li><a class="footer__nav__link" href="index.html#mindmaps">Mindmaps</a></li>
 							<li><a class="footer__nav__link" href="#">Research</a></li>
 							<li><a class="footer__nav__link" href="#">Quizzz</a></li>
-							<li><a class="footer__nav__link" href="#">Contact</a></li>
+							<li><a class="footer__nav__link" href="index.html#contact">Contact</a></li>
 						</ul>
 					</div>
 				</div>
