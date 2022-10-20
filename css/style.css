@@ -26,6 +26,20 @@
   font-style: italic;
   font-display: swap;
 }
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("../assets/fontawesome-free-5.15.4-web/webfonts/fa-solid-900.woff2") format("woff2"), url("../assets/fontawesome-free-5.15.4-web/webfonts/fa-solid-900.woff") format("woff"), url("../assets/fontawesome-free-5.15.4-web/webfonts/fa-solid-900.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../assets/fontawesome-free-5.15.4-web/webfonts/fa-regular-400.woff2") format("woff2"), url("../assets/fontawesome-free-5.15.4-web/webfonts/fa-regular-400.woff") format("woff"), url("../assets/fontawesome-free-5.15.4-web/webfonts/fa-regular-400.ttf") format("truetype");
+}
 *,
 *::before,
 *::after {
@@ -129,7 +143,7 @@ td {
   vertical-align: baseline;
 }
 
-div::-moz-selection, a::-moz-selection, p::-moz-selection, span::-moz-selection {
+div::-moz-selection, a::-moz-selection, p::-moz-selection, span::-moz-selection, li::-moz-selection, input::-moz-selection, button::-moz-selection {
   color: white !important;
   background-color: black !important;
 }
@@ -137,7 +151,10 @@ div::-moz-selection, a::-moz-selection, p::-moz-selection, span::-moz-selection 
 div::selection,
 a::selection,
 p::selection,
-span::selection {
+span::selection,
+li::selection,
+input::selection,
+button::selection {
   color: white !important;
   background-color: black !important;
 }
@@ -361,12 +378,15 @@ body {
           box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
-.section {
+.section,
+.chapter {
   padding: 112px 30px;
   border-bottom: 1px solid rgba(128, 128, 128, 0.3);
 }
-.section:last-child {
+.section:last-child,
+.chapter:last-child {
   border-bottom: none;
+  padding-bottom: 0;
 }
 
 .section__title {
@@ -582,9 +602,6 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.quote-block:not(:last-child) {
-  margin-bottom: 48px;
-}
 
 .quote-block--reversed {
   -webkit-box-orient: horizontal;
@@ -648,7 +665,7 @@ body {
 
 .quote-block__link {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 24px;
 }
 .quote-block__link:hover::after {
   content: "";
@@ -753,52 +770,17 @@ body {
 .tag {
   padding: 8px 16px;
 }
+.tag::first-letter {
+  color: #bd1220 !important;
+}
 
 .tag-link {
-  color: darkgray;
+  color: rgb(99, 99, 99);
   font-size: 1.1rem;
 }
 .tag-link:hover, .tag-link:active, .tag-link:focus {
   color: black;
   cursor: pointer;
-}
-
-.footer {
-  padding: 200px 30px 64px;
-  background-color: #333;
-}
-
-.footer__blocks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-column-gap: 48px;
-     -moz-column-gap: 48px;
-          column-gap: 48px;
-}
-
-.footer__column {
-  max-width: 360px;
-  min-width: 200px;
-}
-
-.contact-block {
-  -webkit-box-flex: 3;
-      -ms-flex-positive: 3;
-          flex-grow: 3;
-}
-
-.contact__text {
-  margin-bottom: 24px;
-}
-
-.contact-block,
-.nav-block,
-.subscribe-block {
-  padding: 0 15px;
 }
 
 .article-header {
@@ -822,7 +804,7 @@ body {
   left: 0;
   right: 0;
   padding: 24px 30px;
-  background-color: rgba(212, 212, 212, 0.8);
+  background-color: rgba(255, 255, 255, 0.6);
   top: 200px;
 }
 
@@ -882,7 +864,7 @@ body {
 }
 .contents__link:hover, .contents__link:active, .contents__link:focus {
   color: white;
-  font-weight: bold;
+  font-weight: 500;
   -webkit-transition: all 0.7s;
   -o-transition: all 0.7s;
   transition: all 0.7s;
@@ -899,8 +881,8 @@ body {
 }
 
 .text-intro {
-  font-weight: 600;
-  padding: 0 30px;
+  font-weight: 500;
+  color: black;
 }
 
 .article-content {
@@ -912,6 +894,8 @@ body {
   background: -webkit-gradient(linear, right top, left top, from(darkgray), to(transparent));
   background: -o-linear-gradient(right, darkgray, transparent);
   background: linear-gradient(-90deg, darkgray, transparent);
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .note {
@@ -935,6 +919,29 @@ body {
   vertical-align: center;
   display: inline-block;
   margin: 4px 16px 4px 0;
+}
+
+.article__image {
+  display: inline-block;
+  width: 600px;
+  max-width: 50%;
+  margin-right: 30px;
+}
+
+.article__image--center {
+  display: block;
+  max-height: 350px;
+  width: auto;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.text-source {
+  margin: 0 8px;
+  font-size: 0.6rem;
+  font-style: italic;
+  font-weight: 300;
+  text-align: center;
 }
 
 .block-stages {
@@ -961,7 +968,7 @@ body {
 }
 .block-stages-item:hover {
   font-size: 1.1em;
-  font-weight: 700;
+  font-weight: 500;
   -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.6);
           box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.6);
   -webkit-transition: all 0.5s;
@@ -1027,7 +1034,7 @@ body {
   background-color: black;
 }
 .list1 .list-item:nth-child(odd) {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .list2 {
@@ -1058,7 +1065,7 @@ body {
 
 .list2 .list-item:first-child,
 .list2 .list-item:last-child {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .list-item span {
@@ -1073,8 +1080,8 @@ body {
 .text-post {
   color: black;
   font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0;
+  font-weight: 500;
+  margin: 60px 0;
 }
 
 .references {
@@ -1129,6 +1136,44 @@ body {
 
 .article-list {
   width: 50%;
+}
+
+.footer {
+  padding: 200px 30px 64px;
+  background-color: #333;
+}
+
+.footer__blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 48px;
+     -moz-column-gap: 48px;
+          column-gap: 48px;
+}
+
+.footer__column {
+  max-width: 360px;
+  min-width: 200px;
+}
+
+.contact-block {
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+}
+
+.contact__text {
+  margin-bottom: 24px;
+}
+
+.contact-block,
+.nav-block,
+.subscribe-block {
+  padding: 0 15px;
 }
 
 .footer__title {
