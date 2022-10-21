@@ -1,0 +1,63 @@
+.hero {
+	display: flex;
+	max-width: 1920px;
+	overflow: hidden;
+	margin-top: 112px;
+}
+
+.hero__slider {
+	flex: 0 0 50%;
+	width: 50%;
+	min-width: 500px;
+	max-height: 670px;
+	border-bottom-right-radius: 30%;
+	overflow: hidden;
+}
+
+.slider__image {
+	top: 0;
+	right: 180px;
+	width: auto;
+	height: 100%;
+}
+
+.hero__text {
+	align-self: center;
+	padding: 30px;
+}
+
+.hero__title {
+	max-width: 690px;
+	margin-left: -122px;
+	margin-bottom: 1rem;
+	font-size: 7rem;
+	font-weight: 500;
+	line-height: 1;
+}
+
+.hero__welcome {
+	margin-left: 50px;
+	margin-bottom: 48px;
+	color: $black;
+	font-size: 1.1rem;
+}
+
+.hero__buttons {
+	margin-left: 50px;
+}
+
+.hero__button {
+	padding: 14px 30px;
+	color: $red;
+	border: 2px solid $red;
+	border-radius: 30px;
+	font-weight: 500;
+	text-transform: uppercase;
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $red;
+		color: white;
+		box-shadow: $shadGrey;
+	}
+}

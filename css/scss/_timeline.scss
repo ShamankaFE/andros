@@ -1,0 +1,126 @@
+.timeline {
+	display: block;
+	float: none;
+	background-color: $black;
+}
+
+.timeline__box {
+	position: relative;
+	max-width: 100%;
+	margin: 0 auto;
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 6px;
+		background-color: white;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		margin-left: -3px;
+	}
+}
+
+.timeline__container {
+	padding: 16px 40px;
+	position: relative;
+	background-color: inherit;
+	width: 50%;
+	&::after {
+		content: "";
+		position: absolute;
+		width: 48px;
+		height: 48px;
+		right: -24px;
+		background-color: $white;
+		border: 6px solid $red;
+		top: 15px;
+		border-radius: 50%;
+		z-index: 1;
+	}
+}
+
+.timeline__container--left {
+	left: 0;
+	&::before {
+		content: " ";
+		height: 0;
+		position: absolute;
+		top: 30px;
+		width: 0;
+		z-index: 1;
+		right: 30px;
+		border: medium solid white;
+		border-width: 10px 0 10px 10px;
+		border-color: transparent transparent transparent white;
+	}
+}
+
+.timeline__container--right {
+	left: 50%;
+	&::before {
+		content: " ";
+		height: 0;
+		position: absolute;
+		top: 30px;
+		width: 0;
+		z-index: 1;
+		left: 30px;
+		border: medium solid white;
+		border-width: 10px 10px 10px 0;
+		border-color: transparent white transparent transparent;
+	}
+	&::after {
+		left: -24px;
+	}
+}
+
+.timeline__content {
+	position: relative;
+	padding: 8px 16px;
+	max-height: 350px;
+	overflow: auto;
+	background-color: white;
+	border-radius: 6px;
+}
+
+.timeline__year {
+	color: $red;
+	margin: 0;
+	padding: 16px 0;
+}
+
+.timeline__note {
+	font-size: 0.8rem;
+	line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+	.timeline__box::after {
+		left: 34px;
+	}
+
+	.timeline__container {
+		width: 100%;
+		padding-left: 70px;
+		padding-right: 25px;
+		&::before {
+			left: 60px;
+			border: medium solid white;
+			border-width: 10px 10px 10px 0;
+			border-color: transparent white transparent transparent;
+		}
+	}
+
+	.timeline__container--left::after,
+	.timeline__container--right::after {
+		left: 10px;
+	}
+
+	.timeline__container--right {
+		left: 0%;
+	}
+	.timeline__content {
+		max-height: 100%;
+	}
+}
