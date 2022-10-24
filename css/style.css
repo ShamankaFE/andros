@@ -27,14 +27,14 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome Solid";
   font-style: normal;
   font-weight: 900;
   font-display: block;
   src: url("../assets/fontawesome-free-5.15.4-web/webfonts/fa-solid-900.woff2") format("woff2"), url("../assets/fontawesome-free-5.15.4-web/webfonts/fa-solid-900.woff") format("woff"), url("../assets/fontawesome-free-5.15.4-web/webfonts/fa-solid-900.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome";
   font-style: normal;
   font-weight: 400;
   font-display: block;
@@ -143,7 +143,7 @@ td {
   vertical-align: baseline;
 }
 
-div::-moz-selection, a::-moz-selection, p::-moz-selection, span::-moz-selection, li::-moz-selection, input::-moz-selection, button::-moz-selection {
+div::-moz-selection, a::-moz-selection, p::-moz-selection, span::-moz-selection, li::-moz-selection, input::-moz-selection, button::-moz-selection, dd::-moz-selection, dt::-moz-selection {
   color: white !important;
   background-color: #000 !important;
 }
@@ -154,7 +154,9 @@ p::selection,
 span::selection,
 li::selection,
 input::selection,
-button::selection {
+button::selection,
+dd::selection,
+dt::selection {
   color: white !important;
   background-color: #000 !important;
 }
@@ -216,10 +218,6 @@ body {
   font-size: 2rem;
   font-weight: bold;
   text-decoration: none;
-}
-
-.accent {
-  color: #bd1220;
 }
 
 .site-nav__toggle {
@@ -488,6 +486,13 @@ body {
   border-radius: 50%;
 }
 
+.accent {
+  color: #bd1220;
+}
+.accent--bold {
+  font-weight: 500;
+}
+
 .test-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -509,8 +514,8 @@ body {
 }
 
 .image-test {
-  height: 100%;
-  max-height: 420px;
+  min-height: 100%;
+  max-height: 360px;
   width: auto;
   position: relative;
   top: 0;
@@ -558,6 +563,7 @@ body {
   display: inline-block;
   padding: 14px 30px;
   margin-bottom: 15px;
+  background-color: #fff;
   color: gray;
   border: 2px solid gray;
   border-radius: 30px;
@@ -919,10 +925,21 @@ body {
   position: relative;
 }
 
-.article-header--models {
+.article-header--lmodels {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.5))), url("../img/article_lmodels.jpg");
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_lmodels.jpg");
   background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_lmodels.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.article-header--success {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.5))), url("../img/article_success.jpg");
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_success.jpg");
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_success.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1004,14 +1021,20 @@ body {
   height: 12px;
   display: inline-block;
   vertical-align: center;
+  margin-right: 1rem;
   border-radius: 50%;
   background-color: #bd1220;
-  margin-right: 1rem;
 }
 
 .text-intro {
   font-weight: 500;
   color: #000;
+}
+.text-intro--main::first-letter {
+  float: left;
+  margin: -44px 16px -30px 0;
+  color: #bd1220;
+  font-size: 5rem;
 }
 
 .article-content {
@@ -1061,14 +1084,21 @@ body {
           flex-flow: column;
   float: left;
   max-width: 50%;
-  max-height: 350px;
-  margin-right: 30px;
+  max-height: 450px;
+  margin-right: 50px;
   margin-bottom: 48px;
 }
 
 .image-block--center {
   float: none;
-  max-width: 80%;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.image-block--full {
+  float: none;
+  max-width: 100%;
+  max-height: 100%;
   margin: 0 auto;
 }
 
@@ -1106,7 +1136,9 @@ body {
 }
 
 .image-wrap--stages {
-  background: url("../img/learning.jpg") no-repeat;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.5))), url("../img/learning.jpg") no-repeat;
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/learning.jpg") no-repeat;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/learning.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: left bottom;
@@ -1276,39 +1308,142 @@ body {
           column-gap: 60px;
 }
 
+.test-card-block {
+  width: 70%;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  background-color: transparent;
+}
+.test-card-block:hover .test-card {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  -webkit-box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
 .test-card {
-  width: 50%;
-  overflow: hidden;
-  -ms-flex-negative: 3;
-      flex-shrink: 3;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform 1.5s;
+  transition: -webkit-transform 1.5s;
+  -o-transition: transform 1.5s;
+  transition: transform 1.5s;
+  transition: transform 1.5s, -webkit-transform 1.5s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   border: 2px solid #bd1220;
-  min-height: 240px;
+  min-height: 300px;
+}
+
+.reverse {
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  -o-transition: transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.reverse,
+.averse {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.reverse {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.test-card__side-one {
+  min-height: 100%;
+  overflow: hidden;
 }
 
 .test-card__image {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 100%;
-  max-width: 100%;
+  width: 100%;
+  min-height: 300px;
 }
 
 .test-card__title {
-  position: relative;
-  margin-top: -300px;
-  padding: 24px;
+  position: absolute;
+  top: 100px;
+  left: 0;
   width: 100%;
+  padding: 24px;
   color: white;
   background-color: #bd1220;
   font-size: 3rem;
   text-align: center;
 }
 
+.test-card__side-two {
+  padding: 30px;
+  background-color: #bd1220;
+  color: #fff;
+}
+
+.test-card-title {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.test-card__items {
+  margin: 15px 30px;
+}
+
+.test-card__item {
+  margin-bottom: 8px;
+  color: lightgrey;
+  font-size: 1rem;
+}
+
+.button-box--flip {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+.button--test-card {
+  margin-bottom: 0;
+}
+
 .article-list {
   width: 50%;
 }
 
+@media (max-width: 768px) {
+  .more-block {
+    display: block;
+    margin: 30px auto;
+  }
+  .test-card-block,
+.article-list {
+    margin: 30px auto;
+  }
+  .more-block__title,
+.title,
+.subtitle {
+    max-width: 100%;
+    text-align: center;
+  }
+}
 .image-wrap--pedagogy {
-  background: url("../img/fatherson.jpg") no-repeat;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.5))), url("../img/fatherson.jpg") no-repeat;
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/fatherson.jpg") no-repeat;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/fatherson.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: left center;
@@ -1497,4 +1632,286 @@ caption {
   .timeline__content {
     max-height: 100%;
   }
+}
+.term-list {
+  background-color: lightgray;
+  color: #000;
+  line-height: 1.5;
+}
+.term-list--main {
+  margin-bottom: 24px;
+  padding: 30px;
+  -webkit-box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.term {
+  margin-left: 16px;
+  color: #bd1220;
+  font-style: italic;
+}
+.term::before {
+  content: "\f061";
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 16px;
+  font-family: "Font Awesome Solid";
+  font-weight: 400;
+  font-size: 12px;
+}
+.term--main {
+  margin-left: 0;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+}
+.term--main::before {
+  content: "\f08d";
+  font-weight: 900;
+  font-size: 16px;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.term--smile::before {
+  content: "\f118";
+  font-family: "Font Awesome";
+  font-weight: 400;
+}
+.term--warning::before {
+  content: "\f0e7";
+  font-family: "Font Awesome Solid";
+  font-weight: 400;
+}
+
+.definition {
+  margin-left: 16px;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+.definition--main {
+  margin-bottom: 16px;
+  margin-left: 0;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  width: 100%;
+}
+
+.column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.column--half {
+  max-width: 50%;
+}
+
+.impact-block {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.5))), url("../img/stones.jpg") no-repeat;
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/stones.jpg") no-repeat;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/stones.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: right bottom;
+  margin: 50px 0px;
+  max-height: 100%;
+  padding: 30px;
+  margin: 0;
+}
+
+.tip-block__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: space-between;
+  width: 1000px;
+}
+
+.tip-card {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.tip-card__side-one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: flex-end;
+  background-color: #000;
+  min-width: 250px;
+  height: 450px;
+  padding: 30px;
+  display: none;
+}
+
+.tip-card__title {
+  color: #fff;
+  font-size: 3rem;
+  line-height: 1.2;
+  text-align: center;
+  margin: auto auto;
+}
+
+.tip-card__side-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center;
+  overflow: hidden;
+  background-color: #bd1220;
+  width: 100%;
+  max-width: 300px;
+  height: 450px;
+  padding: 15px;
+}
+
+.tip__title {
+  color: #fff;
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.tip__content {
+  color: lightgray;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.fact-menu {
+  margin: 36px auto;
+  overflow: hidden;
+}
+
+.fact-menu__title {
+  margin: 0;
+  padding: 8px;
+  background-color: lightgrey;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.fact-menu__list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.fact-menu__item {
+  min-width: 20%;
+  color: lightgray;
+}
+.fact-menu__item:not(:last-child) {
+  border-right: 1px solid gray;
+}
+.fact-menu__item:nth-child(3) {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.fact-menu__list--drop {
+  position: relative;
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  background-color: #bd1220;
+  color: white;
+  -webkit-box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
+  opacity: 0.8;
+  display: none;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 2.8s;
+  transition: -webkit-transform 2.8s;
+  -o-transition: transform 2.8s;
+  transition: transform 2.8s;
+  transition: transform 2.8s, -webkit-transform 2.8s;
+}
+
+.fact-menu__item--drop {
+  padding: 8px;
+  padding-left: 16px;
+  border-bottom: 1px solid gray;
+}
+
+.fact-menu__item--title {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  margin: 0;
+  padding: 16px;
+  padding-right: 36px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: lightgray;
+  font-size: 1.1rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+.fact-menu__item--title::after {
+  content: "\f160";
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome Solid";
+  font-weight: 400;
+}
+.fact-menu__item--title:hover, .fact-menu__item--title:active, .fact-menu__item--title:focus, .fact-menu__item--title:target {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+.fact-menu__item--title:hover ~ .panel, .fact-menu__item--title:active ~ .panel, .fact-menu__item--title:focus ~ .panel, .fact-menu__item--title:target ~ .panel {
+  color: white;
+  opacity: 1;
+}
+
+.accordion {
+  -webkit-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
 }
