@@ -41,3 +41,29 @@
 		cursor: pointer;
 	}
 }
+
+.search-block__input {
+	position: relative;
+	max-width: 30%;
+	margin: 0 auto;
+	&::after {
+		content: "\f002";
+		position: absolute;
+		top: 8px;
+		right: 16px;
+		text-rendering: auto;
+		-webkit-font-smoothing: antialiased;
+		font-family: "Font Awesome Solid";
+		font-weight: 900;
+	}
+}
+
+#myInput {
+	width: 100%;
+	margin-bottom: 16px;
+	padding: 12px 20px 12px 40px;
+	font-size: 16px;
+	text-align: center;
+	border-radius: 10px;
+	border: 2px solid black;
+}
