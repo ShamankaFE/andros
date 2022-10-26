@@ -544,26 +544,28 @@ body {
 	width: 100%;
 }
 
-// .article-header__image {
-// 	object-fit: cover;
-// 	object-position: center;
-// 	width: 100%;
-// }
+.article-header--andragogy {
+	@include imageHeader(url("../img/article_andragogy.jpg"));
+}
 
 .article-header--learner {
 	@include imageHeader(url("../img/article_alearner.jpg"), bottom);
-}
-
-.article-header--andragogy {
-	@include imageHeader(url("../img/article_andragogy.jpg"));
 }
 
 .article-header--lmodels {
 	@include imageHeader(url("../img/article_lmodels.jpg"));
 }
 
+.article-header--kolb {
+	@include imageHeader(url("../img/article_kolb.jpg;"));
+}
+
 .article-header--success {
 	@include imageHeader(url("../img/article_success.jpg"));
+}
+
+.article-header--motivation {
+	@include imageHeader(url("../img/article_motivation.jpg"));
 }
 
 .article-header__title {
@@ -1079,9 +1081,7 @@ body {
 
 .tip-block__container {
 	display: flex;
-	// flex-direction: row;
 	justify-items: space-between;
-	// flex-wrap: wrap;
 	width: 1000px;
 }
 
@@ -1092,14 +1092,10 @@ body {
 }
 
 .tip-card__side-one {
-	// position: relative;
-	// top: 0;
-	// left: 0;
 	display: flex;
 	flex-direction: column;
 	justify-items: flex-end;
 	background-color: $black;
-	// width: 100%;
 	min-width: 250px;
 	height: 450px;
 	padding: 30px;
@@ -1115,14 +1111,9 @@ body {
 	line-height: 1.2;
 	text-align: center;
 	margin: auto auto;
-	// position: relative;
-	// bottom: 0;
 }
 
 .tip-card__side-two {
-	// position: relative;
-	// top: 0;
-	// left: 0;
 	display: flex;
 	flex-direction: column;
 	justify-items: center;
@@ -1149,5 +1140,3 @@ body {
 }
 
 @import "scss/dropmenu";
-
-

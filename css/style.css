@@ -323,14 +323,16 @@ body {
           flex: 0 0 50%;
   width: 50%;
   min-width: 500px;
-  max-height: 670px;
+  height: 100%;
   border-bottom-right-radius: 30%;
   overflow: hidden;
 }
 
 .slider__image {
+  position: relative;
   top: 0;
-  right: 180px;
+  right: 0;
+  z-index: -1;
   width: auto;
   height: 100%;
 }
@@ -794,6 +796,32 @@ body {
   cursor: pointer;
 }
 
+.search-block__input {
+  position: relative;
+  max-width: 30%;
+  margin: 0 auto;
+}
+.search-block__input::after {
+  content: "\f002";
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome Solid";
+  font-weight: 900;
+}
+
+#myInput {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 12px 20px 12px 40px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
 .footer {
   padding: 200px 30px 64px;
   background-color: #333;
@@ -903,22 +931,22 @@ body {
   width: 100%;
 }
 
-.article-header--learner {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.5))), url("../img/article_alearner.jpg");
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_alearner.jpg");
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_alearner.jpg");
-  background-position: bottom;
+.article-header--andragogy {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.5))), url("../img/article_andragogy.jpg");
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_andragogy.jpg");
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_andragogy.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
 }
 
-.article-header--andragogy {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.5))), url("../img/article_andragogy.jpg");
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_andragogy.jpg");
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_andragogy.jpg");
-  background-position: center;
+.article-header--learner {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.5))), url("../img/article_alearner.jpg");
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_alearner.jpg");
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_alearner.jpg");
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -936,10 +964,32 @@ body {
   position: relative;
 }
 
+.article-header--kolb {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.5))), url("../img/article_kolb.jpg;");
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_kolb.jpg;");
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_kolb.jpg;");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
 .article-header--success {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.5))), url("../img/article_success.jpg");
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_success.jpg");
   background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_success.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.article-header--motivation {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.5))), url("../img/article_motivation.jpg");
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_motivation.jpg");
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_motivation.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
