@@ -985,10 +985,10 @@ body {
   position: relative;
 }
 
-.article-header--motivation {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.5))), url("../img/article_motivation.jpg");
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_motivation.jpg");
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_motivation.jpg");
+.article-header--micro {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.5))), url("../img/article_micro.jpg");
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_micro.jpg");
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_micro.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1052,6 +1052,12 @@ body {
 }
 .item-list--link:hover, .item-list--link:active, .item-list--link:focus {
   color: #000;
+}
+.item-list--contrast {
+  color: #fff;
+}
+.item-list--contrast::before {
+  background-color: #fff;
 }
 
 .contents__link {
@@ -1347,6 +1353,10 @@ body {
 .item-list--ref::before {
   content: "";
   background-color: #333;
+}
+
+.item-list--contrast {
+  color: #fff;
 }
 
 .more-block {
@@ -1845,6 +1855,9 @@ caption {
   -webkit-box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
 }
+.tip-card--small {
+  height: 250px;
+}
 
 .tip-card__side-one {
   display: -webkit-box;
@@ -1862,11 +1875,15 @@ caption {
 }
 
 .tip-card__title {
+  width: 100%;
   color: #fff;
   font-size: 3rem;
   line-height: 1.2;
   text-align: center;
   margin: auto auto;
+}
+.tip-card__title--small {
+  font-size: 2rem;
 }
 
 .tip-card__side-two {
@@ -1880,11 +1897,10 @@ caption {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  justify-items: center;
   overflow: hidden;
   background-color: #bd1220;
   min-width: 250px;
-  min-height: 100%;
+  height: 100%;
   padding: 15px;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
@@ -1894,7 +1910,11 @@ caption {
   color: #fff;
   font-size: 1.6rem;
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+}
+.tip__title--small {
+  font-size: 1rem;
+  line-height: 1.2;
 }
 
 .tip__content {
@@ -2108,4 +2128,58 @@ caption {
 
 .tooltip:hover ~ .tooltiptext {
   opacity: 1;
+}
+
+.collapsible {
+  cursor: pointer;
+  width: 100%;
+  padding: 16px;
+  background-color: #000;
+  color: lightgrey;
+  -webkit-box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3);
+  text-align: left;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+}
+
+.collapsible:after {
+  content: "\f13a";
+  float: right;
+  margin: 0 8px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-family: "Font Awesome Solid";
+  font-weight: 900;
+}
+
+.active:after {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #bd1220;
+  color: #fff;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 36px;
+  -webkit-transition: max-height 0.3s ease-out;
+  -o-transition: max-height 0.3s ease-out;
+  transition: max-height 0.3s ease-out;
+  background-color: #f1f1f1;
+  color: #000;
+  font-size: 0.9rem;
+  line-height: 1.3;
 }

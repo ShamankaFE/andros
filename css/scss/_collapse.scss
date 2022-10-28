@@ -1,0 +1,44 @@
+.collapsible {
+	cursor: pointer;
+	width: 100%;
+	padding: 16px;
+	background-color: $black;
+	color: lightgrey;
+	box-shadow: $shadLightGrey;
+	text-align: left;
+	text-transform: capitalize;
+	font-size: 1.1rem;
+}
+
+.collapsible:after {
+	content: "\f13a";
+	float: right;
+	margin: 0 8px;
+	color: $white;
+	font-size: 1.1rem;
+	font-family: "Font Awesome Solid";
+	font-weight: 900;
+}
+
+.active:after {
+	transform: rotate(180deg);
+	transition: transform 0.3s;
+}
+
+.active,
+.collapsible:hover {
+	background-color: $red;
+	color: $white;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.collapsible__content {
+	max-height: 0;
+	overflow: hidden;
+	padding: 0 36px;
+	transition: max-height 0.3s ease-out;
+	background-color: #f1f1f1;
+	color: $black;
+	font-size: 0.9rem;
+	line-height: 1.3;
+}
