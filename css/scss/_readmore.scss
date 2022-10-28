@@ -1,0 +1,46 @@
+.hidden-toggle {
+	display: none;
+}
+
+.hidden-block {
+	display: none;
+	transition: 0.5s linear;
+}
+
+.quote-block__link {
+	display: inline-block;
+	margin-bottom: 24px;
+	color: $red;
+	font-size: 0.85rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	&:hover::after {
+		content: "\f061";
+		display: inline-block;
+		margin-left: 8px;
+		font-size: 0.85rem;
+		font-family: "Font Awesome Solid";
+		font-weight: 900;
+		transform: rotate(90deg);
+		transition: transform 0.5s ease-in;
+	}
+}
+
+.hidden-toggle:checked ~ .hidden-block {
+	display: block;
+}
+
+.hidden-toggle:checked ~ .hidden-link {
+	visibility: hidden;
+	&::before {
+		content: "Show less";
+		visibility: visible;
+		display: inline-block;
+		margin-left: 8px;
+		font-size: 0.85rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 0.1rem;
+	}
+}

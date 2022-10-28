@@ -675,26 +675,6 @@ body {
   font-style: italic;
 }
 
-.quote-block__link {
-  display: block;
-  margin-bottom: 24px;
-}
-.quote-block__link:hover::after {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 8px;
-  width: 24px;
-  height: 24px;
-  background: url("../img/icons/arrow.svg") 0 0 no-repeat;
-  fill: #bd1220;
-  background-size: cover;
-  border-radius: 50%;
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
 .mark {
   background-color: rgba(255, 255, 0, 0.277);
 }
@@ -745,8 +725,63 @@ body {
   margin-bottom: 24px;
 }
 
+.hidden-toggle {
+  display: none;
+}
+
+.hidden-block {
+  display: none;
+  -webkit-transition: 0.5s linear;
+  -o-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+.quote-block__link {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: #bd1220;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+.quote-block__link:hover::after {
+  content: "\f061";
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.85rem;
+  font-family: "Font Awesome Solid";
+  font-weight: 900;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  -o-transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+}
+
+.hidden-toggle:checked ~ .hidden-block {
+  display: block;
+}
+
+.hidden-toggle:checked ~ .hidden-link {
+  visibility: hidden;
+}
+.hidden-toggle:checked ~ .hidden-link::before {
+  content: "Show less";
+  visibility: visible;
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
 .search-block {
-  height: 400px;
+  height: 360px;
 }
 
 .search-block__content {
@@ -780,7 +815,7 @@ body {
 }
 
 .tag {
-  padding: 8px 16px;
+  padding: 4px 16px;
 }
 .tag::first-letter {
   color: #bd1220 !important;
@@ -788,7 +823,7 @@ body {
 
 .tag-link {
   color: rgb(99, 99, 99);
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 .tag-link:hover, .tag-link:active, .tag-link:focus {
   color: #000;
