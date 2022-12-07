@@ -1,0 +1,62 @@
+.term-list {
+	background-color: lightgray;
+	color: $black;
+	line-height: 1.5;
+	&--main {
+		margin-bottom: 24px;
+		padding: 30px;
+		box-shadow: $shadLightGrey;
+	}
+}
+.term {
+	margin-left: 16px;
+	color: $red;
+	font-style: italic;
+	&::before {
+		content: "\f061";
+		display: inline-block;
+		text-rendering: auto;
+		-webkit-font-smoothing: antialiased;
+		margin-right: 16px;
+		font-family: "Font Awesome Solid";
+		font-weight: 400;
+		font-size: 12px;
+	}
+
+	&--main {
+		margin-left: 0;
+		font-size: 1.2rem;
+		font-style: normal;
+		font-weight: 500;
+
+		&::before {
+			content: "\f08d";
+			font-weight: 900;
+			font-size: 16px;
+			transform: rotate(0deg);
+		}
+	}
+
+	&--smile::before {
+		content: "\f118";
+		font-family: "Font Awesome";
+		font-weight: 400;
+	}
+
+	&--warning::before {
+		content: "\f0e7";
+		font-family: "Font Awesome Solid";
+		font-weight: 400;
+	}
+}
+.definition {
+	margin-left: 16px;
+	font-size: 0.9rem;
+	font-style: italic;
+	&--main {
+		margin-bottom: 16px;
+		margin-left: 0;
+		font-style: normal;
+		font-weight: 500;
+	}
+}

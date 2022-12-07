@@ -1,5 +1,5 @@
 .search-block {
-	height: 400px;
+	height: 360px;
 }
 
 .search-block__content {
@@ -25,7 +25,7 @@
 }
 
 .tag {
-	padding: 8px 16px;
+	padding: 4px 16px;
 	&::first-letter {
 		color: $red !important;
 	}
@@ -33,7 +33,7 @@
 
 .tag-link {
 	color: rgb(99, 99, 99);
-	font-size: 1.1rem;
+	font-size: 1rem;
 	&:hover,
 	&:active,
 	&:focus {

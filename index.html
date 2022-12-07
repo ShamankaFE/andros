@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="assets/fontawesome-free-5.15.4-web/css/fontawesome.min.css">
   <title>Andros - Adult Learning and Adult Learners</title>
 </head>
 
@@ -14,34 +13,31 @@
   <header class="page-header">
     <div class="page-header--top _wrap">
       <div class="page-header__logo">
-        <a class="site-logo" href="index.html">Adros<span class="accent">.</span></a>
+        <h1><a class="site-logo" href="index.html">Andros<span class="accent">.</span></a></h1>
       </div>
 
       <div class="page-header__nav">
         <input class="site-nav__toggle" type="checkbox" id="menu">
         <label class="site-nav__label open" for="menu">
-          <!-- <i class="fas fa-bars"></i> -->
-          <img src="assets/fontawesome-free-5.15.4-web/svgs/solid/bars.svg" alt="menu icon" width="24">
+          <img src="./img/svg/bars.svg" alt="toggle" width="24" aria-hidden>
         </label>
         <nav class="site-nav">
           <ul class="site-nav__links">
             <li><a class="site-nav__link" href="index.html">Home</a></li>
             <li><a class="site-nav__link" href="index.html#articles">Articles</a></liclass=>
-            <li><a class="site-nav__link" href="index.html#test">Learn Your Style</a></li>
+            <li><a class="site-nav__link" href="questionaire.html">Learn Your Style</a></li>
             <li><a class="site-nav__link" href="index.html#quotes">Inspiration</a></li>
             <li><a class="site-nav__link" href="index.html#mindmaps">Mindmaps</a></li>
-            <li><a class="site-nav__link" href="#">Research</a></li>
-            <li><a class="site-nav__link" href="#">Quizzz</a></li>
+            <li><a class="site-nav__link" href="research.html">Research</a></li>
+            <!-- <li><a class="site-nav__link" href="quiz.html">Quizzz</a></li> -->
             <li><a class="site-nav__link" href="#contact">Contact</a></li>
           </ul>
           <label class="site-nav__label close" for="menu">
-            <!-- <i class="fa fa-times"></i> -->
-            <img src="assets/fontawesome-free-5.15.4-web/svgs/solid/times.svg" alt="menu icon" width="24">
+            <img src="/img/svg/times.svg" alt="toggle" width="24" aria-hidden>
           </label>
         </nav>
       </div>
     </div>
-
   </header>
 
   <main class="main">
@@ -85,7 +81,7 @@
           <div class="article">
             <h4 class="article__title">Who is Adult Learner</h4>
             <div class="article__excerpt">
-              Knowles defined andragogy as “the art and science of helping adults learn”. So who are these adult
+              Knowles defined andragogy as "the art and science of helping adults learn". So who are these adult
               learners?
             </div>
             <a class="article__link" href="adult-learner.html">Learn more</a>
@@ -137,10 +133,9 @@
             <h2 class="title ">Personal Learning Style</h2>
           </div>
           <div class="test__excerpt">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut non voluptatibus harum nihil dolore
-            impedit,
-            quae obcaecati delectus fugiat odio facere consequuntur natus esse recusandae commodi quos nemo culpa
-            ullam.
+            Over the years, you have probably developed learning habits that help you
+            benefit more from some experiences than from others. You may be unaware of this, and this
+            questionnaire will help you pinpoint your learning preferences and share them with the others.
           </div>
           <div class="test__list">
             <ul class="list__items">
@@ -168,7 +163,28 @@
             <div class="quote-block__image">
               <img class="image-quote" src="img/main_quote_1.jpg" alt="superman is learning" width="960" height="670">
             </div>
-            <div class="quote-block__desc"><h3 class="quote-block__title">Learning is good</h3>Learning is something that takes place daily by interacting with other people and the worldaroundus. Life often throwschallenges at us, there may be hurdles to overcome, sometimes we compare ourselves with otherswhoperform better thanus, but one should never get demotivated.<div class="quote"><div class="quote__text">We now accept the fact that learning is a <span class="mark">lifelong process of keepingabreast of change.</span> Andtheto teach people how to learn.</div><div class="author__name">Peter Drucker</div></div><input class="hidden-toggle" type="checkbox" id="check1"><div class="hidden-block"><div class="quote"><div class="quote__text">The beautiful thing about learning is <span class="mark">nobody can take it away fromyou.</span></div><div class="author__name">B.B. King</div></div><div class="quote"><div class="quote__text"><span class="mark">Wisdom…. comes not from age, but from education and learning.</span></div><div class="author__name">Anton Chekhov</div></div></div><label for="check1" class="quote-block__link hidden-link">Get morequotes</label></div>
+            <div class="quote-block__desc">
+              <h3 class="quote-block__title">Learning is good</h3>Learning is something that takes place daily by
+              interacting with other people and the worldaroundus. Life often throwschallenges at us, there may be
+              hurdles to overcome, sometimes we compare ourselves with otherswhoperform better thanus, but one should
+              never get demotivated.<div class="quote">
+                <div class="quote__text">We now accept the fact that learning is a <span class="mark">lifelong process
+                    of keepingabreast of change.</span> Andtheto teach people how to learn.</div>
+                <div class="author__name">Peter Drucker</div>
+              </div><input class="hidden-toggle" type="checkbox" id="check1">
+              <div class="hidden-block">
+                <div class="quote">
+                  <div class="quote__text">The beautiful thing about learning is <span class="mark">nobody can take it
+                      away fromyou.</span></div>
+                  <div class="author__name">B.B. King</div>
+                </div>
+                <div class="quote">
+                  <div class="quote__text"><span class="mark">Wisdom…. comes not from age, but from education and
+                      learning.</span></div>
+                  <div class="author__name">Anton Chekhov</div>
+                </div>
+              </div><label for="check1" class="quote-block__link hidden-link">Get morequotes</label>
+            </div>
           </div>
 
           <div class="quote-block  quote-block--reversed">
@@ -255,9 +271,6 @@
                     are doing or learning to do.</span>
                 </div>
                 <div class="quote__author author">
-                  <!-- <div class="author__pic">
-                    <img src="" alt="">
-                  </div> -->
                   <div class="author__name">
                     Pele
                   </div>
@@ -277,7 +290,7 @@
                 </div>
                 <div class="quote">
                   <div class="quote__text">
-                    A ‘genius’ is often merely a talented person <span class="mark">who has done all of his or
+                    A 'genius' is often merely a talented person <span class="mark">who has done all of his or
                       her homework</span>.
                   </div>
                   <div class="author__name">
@@ -348,6 +361,10 @@
                 Cycle</a></li>
             <li class="search-cloud__tag tag"><a class="tag-link" href="kolb-stages.html#02">Kolb's Learning
                 styles</a></li>
+            <li class="search-cloud__tag tag"><a class="tag-link" href="questionaire.html#style_act">Activist</a></li>
+            <li class="search-cloud__tag tag"><a class="tag-link" href="questionaire.html#style_the">Theorist</a></li>
+            <li class="search-cloud__tag tag"><a class="tag-link" href="questionaire.html#style_ref">Reflector</a></li>
+            <li class="search-cloud__tag tag"><a class="tag-link" href="questionaire.html#style_pra">Pragmatist</a></li>
             <li class="search-cloud__tag tag"><a class="tag-link" href="kolb-stages.html#03">4MAT</a></li>
             <li class="search-cloud__tag tag"><a class="tag-link" href="microlearning.html#01">Ebbinghaus
                 Forgetting Curve</a></li>
@@ -371,18 +388,17 @@
           <div class="contact-block__title" id="contact">
             <h4 class="title  footer__title">Contact</h4>
           </div>
-          <div class="contact__text">
-            <p>Thank you for showing your interest to the Adult Learning psychology. This project
-              was
-              created in the process of self-directed learning too. Always remember to love what you do as I
-              love to create modern and useful websites in the helping and educational
-              fields.
-            </p>
-          </div>
+          Thank you for showing your interest into the Adult Learning. This project
+          was
+          created in the process of self-directed learning too. Always remember to love what you do as I
+          love to create modern and functional websites in the EdTech and service
+          industries.
           <div class="avatar">
-            <img class="avatar__photo" src="img/shamankafe_300.png" alt="author photo" width="300" height="300">
-            <p class="avatar__text">Svetlana Groiss aka ShamankaFE. Here is my <a class="accent" href="#">LinkedIn
-                profile.</a></p>
+            <img class="avatar__photo" src="img/shamankafe_w100.png" alt="author and developer" width="100"
+              height="100">
+            <p class="avatar__text">Svetlana Groiss // ShamankaFE. Here is my <a class="accent"
+                href="https://linkedin.com/in/shamankafe" target="_blank">LinkedIn
+                profile</a></p>
           </div>
         </div>
 
@@ -390,16 +406,16 @@
           <div class="nav-block__title">
             <h4 class="title  footer__title">Navigation</h4>
           </div>
-          <div class="footer__nav">
-            <ul class="footer__nav__links">
-              <li><a class="footer__nav__link" href="index.html">Home</a></li>
-              <li><a class="footer__nav__link" href="index.html#articles">Articles</a></liclass=>
-              <li><a class="footer__nav__link" href="index.html#test">Learn Your Style</a></li>
-              <li><a class="footer__nav__link" href="index.html#quotes">Inspiration</a></li>
-              <li><a class="footer__nav__link" href="index.html#mindmaps">Mindmaps</a></li>
-              <li><a class="footer__nav__link" href="#">Research</a></li>
-              <li><a class="footer__nav__link" href="#">Quizzz</a></li>
-              <li><a class="footer__nav__link" href="index.html#contact">Contact</a></li>
+          <div class="footer-nav">
+            <ul class="footer-nav__links">
+              <li><a class="footer-nav__link" href="index.html">Home</a></li>
+              <li><a class="footer-nav__link" href="index.html#articles">Articles</a></liclass=>
+              <li><a class="footer-nav__link" href="questionaire.html">Learn Your Style</a></li>
+              <li><a class="footer-nav__link" href="index.html#quotes">Inspiration</a></li>
+              <li><a class="footer-nav__link" href="index.html#mindmaps">Mindmaps</a></li>
+              <li><a class="footer-nav__link" href="research.html">Research</a></li>
+              <!-- <li><a class="footer-nav__link" href="quiz.html">Quizzz</a></li> -->
+              <li><a class="footer-nav__link" href="index.html#contact">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -424,29 +440,10 @@
           </div>
         </div>
       </div>
-
     </div>
   </footer>
 
-  <script>
-    function searchByTagName() {
-      var input, filter, ul, li, a, i, txtValue;
-      input = document.querySelector('#myInput');
-      filter = input.value.toUpperCase();
-      ul = document.querySelector(".myUL");
-      li = ul.querySelectorAll('.tag');
-
-      for (i = 0; i < li.length; i++) {
-        a = li[i].querySelectorAll(".tag-link")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          li[i].style.display = "";
-        } else {
-          li[i].style.display = "none";
-        }
-      }
-    }
-  </script>
+  <script src="/js/scripts/searchByTagName.js"></script>
 </body>
 
 </html>
