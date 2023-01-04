@@ -147,7 +147,7 @@
           </div>
           <div class="button-box">
             <a class="button button--test" href="questionaire.html">Discover</a>
-            <a class="button button--link" href="#">Watch video</a>
+            <a class="button button--link" href="#modal-youtube">Watch video</a>
           </div>
 
         </div>
@@ -442,6 +442,30 @@
       </div>
     </div>
   </footer>
+
+  <div id="modal-youtube" aria-hidden="true" class="modal">
+    <a href="#test" class="modal__area"></a>
+    <div class="modal__wrapper">
+      <div class="modal__content">
+        <a href="#test" class="modal__close">Close</a>
+        <h5 class="modal__title">
+          What you need to learn about Learning Styles
+        </h5>
+        <div class="modal__text">
+          Watch this short video below to get a clue...
+        </div>
+        <div class="modal__video">
+          <iframe width="560px" height="315px" src="https://www.youtube.com/embed/cN-T9lnjgrE"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="button-box">
+          <a class="button button--test" href="questionaire.html" target="_blank">Test yourself now</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="/js/scripts/searchByTagName.js"></script>
 </body>
