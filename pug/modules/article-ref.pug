@@ -1,0 +1,12 @@
+block global-variables
+  include ../data/tags-data
+
+section.references.section._wrap
+  h3 References
+
+  ol
+    each item in article.refs
+      li.item-list.item-list--ref #{item.title}
+        a.accent(href=`${item.link}`, target="_blank")  - link
+
+    //- li.item-list.item-list--ref Andragogy in Wikipedia - #[a.accent(href="https://en.wikipedia.org/wiki/Andragogy", target="_blank") link]

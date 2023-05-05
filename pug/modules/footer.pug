@@ -1,0 +1,45 @@
+mixin nav-link(text, href)
+  li
+    a.footer-nav__link(href=href)= text
+
+footer.footer
+  .footer__content._wrap
+    .footer__blocks
+      .contact-block.footer__column
+        .contact-block__title#contact
+          h4.title.footer__title Contact
+        p Thank you for showing your interest into the Adult Learning. This project was created in the process of self-directed learning too. Always remember to love what you do as I love to create modern and functional websites in the EdTech and service industries.
+        .avatar
+          img.avatar__photo(
+            src="img/shamankafe_w100.png"
+            alt="author and developer"
+            width="100"
+            height="100"
+          )
+          p.avatar__text Svetlana Groiss // ShamankaFE. Here is my #[a.accent(href="https://linkedin.com/in/shamankafe" target="_blank") LinkedIn profile]
+      .nav-block.footer__column
+        .nav-block__title
+          h4.title.footer__title Navigation
+        .footer-nav
+          ul.footer-nav__links
+            +nav-link('Home', "index.html")
+            +nav-link('Articles', "index.html#articles")
+            +nav-link('Learn Your Style', "questionaire.html")
+            +nav-link('Inspiration', "index.html#quotes")
+            +nav-link('Mindmaps', "research.html")
+            +nav-link('Research', "index.html#mindmaps")
+      .subscribe-block.footer__column
+        .subscribe-block__title
+          h4.title.footer__title Subscribe
+        p.subscribe-block__text If you would like to receive more tips & tricks on Adult Learning topics, just leave your email address below.
+        .subscribe-form
+          input.name-input.input(
+            autocomplete="off"
+            required
+            placeholder="Your full name"
+            name="string"
+            value=""
+            type="text"
+          )
+          div
+            button.button.button--subscribe(type="submit") Subscribe

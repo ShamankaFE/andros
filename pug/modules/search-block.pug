@@ -1,0 +1,23 @@
+include ../data/tags-data
+
+.search-block__content._wrap
+  .search-block__title.section__title
+    p.subtitle Search
+    h2.title Become learning-friendly with these concepts
+
+  .search-block__input
+    input#myInput(
+      type="text"
+      onkeyup="searchByTagName()"
+      placeholder="Search for terms.."
+    )
+
+  ul.search-cloud.tags.myUL
+    each tag in tags
+      li.search-cloud__tag.tag
+        a.tag-link(href=`${tag.link}`) #{tag.name}
+
+
+    //- li.search-cloud__tag.tag
+    //-   a.tag-link(href="andragogy.html#01") Androgogy
+

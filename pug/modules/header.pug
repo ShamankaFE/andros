@@ -1,0 +1,27 @@
+header.page-header
+  .page-header--top._wrap
+    .page-header__logo
+      h1
+        a.site-logo(class= href === "index-page" ? false : "index.html") Andros #[span.accent .]
+    .page-header__nav
+      input.site-nav__toggle(
+        type="checkbox"
+        id="menu"
+      )
+      label.site-nav__label.open(for="menu")
+        img(
+          src="./img/svg/bars.svg"
+          alt="toggle"
+          width="24"
+          aria-hidden
+        )
+
+      include site-nav
+
+        label.site-nav__label.close(for="menu")
+          img(
+            src="/img/svg/times.svg"
+            alt="toggle"
+            width="24"
+            aria-hidden
+        )

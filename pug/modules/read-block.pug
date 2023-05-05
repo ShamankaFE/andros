@@ -1,0 +1,16 @@
+include ../data/articles-data
+
+section.read-block.section._wrap#articles
+  .read-block__title.section__title
+    p.subtitle Learn for better Learning
+    h2.title Adults need to know how, what and why
+  .articles
+    each article in articles
+      .article
+        h4.article__title= article.listedTitle
+        .article__excerpt= article.listedExcerpt
+        a.article__link(href= article.link) Learn more
+
+      //- h4.article__title Adult Learning science
+      //- .article__excerpt Andragogy in Greek means man-leading. What is it for and how can we benefit from it?
+      //- a.article__link(href="andragogy.html") Learn more

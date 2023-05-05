@@ -1,0 +1,23 @@
+mixin learning-type(title, tip)
+  li.test-card__item.list__item #[span.tooltip= title] #[span.tooltiptext= tip]
+
+.test-card-block
+  .test-card.test-card--flip
+    .test-card__side-one.averse
+      img.test-card__image(
+        src="img/main_test.jpg"
+        alt="test online, learning style test"
+      )
+      .test-card__title Test Yourself!
+    .test-card__side-two.reverse
+      .test-card-title Who are You?
+
+      ul.test-card__items.list__items
+        +learning-type('Activist', 'I want practical tasks and very little theory')
+        +learning-type('Theorist', 'I want handouts, something to take away and study')
+        +learning-type('Reflector', 'I want lots of breaks to go off and read and discuss')
+        +learning-type('Pragmatist', 'I want shortcuts and tips')
+
+      .button-box.button-box--flip
+        a.button.button--test-card(href="questionaire.html") Discover
+        a.button.button--test-card(href="#modal-youtube") Watch video
