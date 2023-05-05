@@ -1,0 +1,46 @@
+block variables
+
+doctype
+html(lang='en-EN')
+
+  head
+    include ../modules/head.pug
+    append head
+      title #{article.title}
+      meta(name="keywords", content = `${article.keyword}`)
+
+  body.page-body
+
+  block header
+    include ../modules/header.pug
+
+  block main
+    main.main(class = article.pageClass)
+      block article-header
+        .article-header(class = `article-header--${article.suffix}`)
+          .article-header__title._wrap
+            p.subtitle.subtitle--article #{article.subTitle}
+            h1.title.title--article #{article.fullTitle}
+
+      .wrapper
+        block contents
+          include ../modules/article-menu
+
+        block content
+
+        block references
+          include ../modules/article-ref
+
+        block more
+          section.more-block.section._wrap
+            include ../modules/test-block
+            include ../modules/article-list
+
+        block search
+          section.search-block.section
+            include ../modules/search-block
+
+  block footer
+    include ../modules/footer.pug
+
+  script(src="/js/main.js")
