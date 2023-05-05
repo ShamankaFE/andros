@@ -1,0 +1,172 @@
+extends layout/page-layout
+
+block variables
+  include ../pug/data/articles-data
+  - var article = articles[3]
+
+block content
+  section.article-content.section._wrap
+    p.text-intro.text-intro--main #{article.introText}
+
+    .article-content__chapter.chapter#01
+      h2.article-content__title Kolb's Experiential Learning Cycle
+      p.text-intro Kolb's experiential learning style theory is typically represented by a four stage learning cycle in which the learner 'touches all the bases':
+
+      figure.image-block
+        img.article__image(src="img/kolb-cycle2.jpg", alt="Kolb learning stages")
+        figcaption.text-source Source of image: www.mohawkcollege.ca
+
+      ol.list
+        li.list-item.list-item--decimal Concrete Experience a new experience of situation is encountered, or a reinterpretation of existing experience.
+        li.list-item.list-item--decimal Reflective Observation of the new experience. Of particular importance are any inconsistencies between experience and understanding.
+        li.list-item.list-item--decimal Abstract Conceptualization. Reflection gives rise to a new idea, or a modification of an existing abstract concept.
+        li.list-item.list-item--decimal Active Experimentation. The learner applies them to the world around them to see what results
+
+      p A typical presentation of Kolb's two continuums is that the east-west axis is called the Processing Continuum (how we approach a task), and the north-south axis is called the Perception Continuum (our emotional response, or how we think or feel about it).
+
+      .note It is possible to enter the cycle at any stage and follow it through its logical sequence. However, effective learning only occurs when a learner is able to execute all four stages of the model. Therefore, no one stage of the cycle is an effective as a learning procedure on its own.
+
+    .article-content__chapter.chapter#02
+      h2.article-content__title Kolb's Learning styles
+      .text-intro Learning styles are a habit of learning based on individual preference, choice, life experience, education, culture, and the current situation or context. Kolb offers a Learning Style Inventory that provides an interesting self-examination of an individual's approach to learning based on four learning styles: Diverging, Assimilating, Converging, and Accommodating. Remember, you use more than one learning style and they can shift based on the situation Curious about which learning styles you prefer?
+
+      figure.image-block.image-block--center
+        img.article__image(src="img/kolb-cycle1.jpg", alt="Kolb learning styles")
+        figcaption.text-source Source of image: www.simplypsychology.org/learning-kolb.html
+
+      .styles-block
+        div
+          h4.accent-block Diverging (watching and feeling - CE/RO)
+          div These people are able to look at things from different perspectives. They are sensitive. They prefer to watch rather than do, tending to gather information and use imagination to solve problems. They are best at viewing concrete situations at several different viewpoints. Kolb called this style 'diverging' because these people perform better in situations that require ideas-generation, for example, brainstorming. People with a diverging learning style have broad cultural interests and like to gather information. They are interested in people, tend to be imaginative and emotional, and tend to be strong in the arts. People with the diverging style prefer to work in groups, to listen with an open mind and to receive personal feedback.
+          .note People with this learning style are more on the creative side of the spectrum. They like to imagine great extents, which help them come up with unique ideas. Divergers rely mostly on the first two stages of the cycle. Diverging learners appreciate a facilitator who is affirming, draws out motivation and self-knowledge, creates personal relationships, and fosters dialogue.
+
+        div
+          h4.accent-block Assimilating (watching and thinking - AC/RO)
+          div The Assimilating learning preference is for a concise, logical approach. Ideas and concepts are more important than people. These people require good clear explanation rather than practical opportunity. They excel at understanding wide-ranging information and organizing it in a clear logical format. People with an assimilating learning style are less focused on people and more interested in ideas and abstract concepts. People with this style are more attracted to logically sound theories than approaches based on practical value. This learning style is important for effectiveness in information and science careers. In formal learning situations, people with this style prefer readings, lectures, exploring analytical models, and having time to think things through.
+          .note Such learners take onto everything with the support of known information. They prefer conceptualization and reflection in absorbing information more effectively. Assimilating learners appreciate a subject expert who has a reflective authoritative style, systematically analyzes and organizes subject matter, and delivers knowledge by lectures and texts.
+
+        div
+          h4.accent-block Converging (doing and thinking - AC/AE)
+          div People with a converging learning style can solve problems and will use their learning to find solutions to practical issues. They prefer technical tasks, and are less concerned with people and interpersonal aspects. People with a converging learning style are best at finding practical uses for ideas and theories. They can solve problems and make decisions by finding solutions to questions and problems. People with a converging learning style are more attracted to technical tasks and problems than social or interpersonal issues. A converging learning style enables specialist and technology abilities. People with a converging style like to experiment with new ideas, to simulate, and to work with practical applications.
+          .note These learners usually focus on the third and fourth stages of the cycle. They like to experiment. For these individuals, it is important to apply their knowledge practically. Hence why they love technical tasks. Converging learners appreciate a standard setter and evaluator who has an objective results-oriented style, sets performance objectives, and structures performance activities to evaluate learning.
+
+        div
+          h4.accent-block Accommodating (doing and feeling - CE/AE)
+          div The Accommodating learning style is 'hands-on', and relies on intuition rather than logic. These people use other people's analysis, and prefer to take a practical, experiential approach. They are attracted to new challenges and experiences, and to carrying out plans. They commonly act on 'gut' instinct rather than logical analysis. People with an accommodating learning style will tend to rely on others for information than carry out their own analysis. This learning style is prevalent within the general population.
+          .note Individuals with this learning style approach new tasks welcomingly. Their style is practical which is why their learning mostly comprises the last stage in the cycle. Accommodating learners appreciate a coach who has an applied collaborative style, works one-on-one with learners to apply and refine their ongoing learning in context, and uses feedback mechanisms and development plans.
+
+      h5 Look at and compare styles:
+
+      .kolb-styles-table
+        table.table-compare.table._wrap
+          caption Source: #[a.accent(href='https://doi.org/10.1504/IJLC.2007.014896', target='_blank') Manikutty, N. Anuradha, K. Hansen, 2007]
+          tr.table__row.table__row--header.kolb-styles--header
+            th.able__cell.table__cell--header Process
+            th.able__cell.table__cell--header Strengths
+            th.able__cell.table__cell--header Mode of solving problems
+            th.able__cell.table__cell--header Style
+
+          tr.table__row
+            td.table__cell(rowspan='2') REFLECTIVE OBSERVATION (watching)
+            td.table__cell
+              ul
+                li.item-list.item-list--table imaginative ability
+                li.item-list.item-list--table viewing a problem from multiply perspectives
+                li.item-list.item-list--table ability to organize these views into a coherent picture
+            td.table__cell
+              ul
+                li.item-list.item-list--table generation of multiply ideas
+                li.item-list.item-list--table exploring many possible solutions
+            td.table__cell.table__cell--term Diverging (watching and feeling - CE/RO)
+
+          tr.table__row
+            td.table__cell
+              ul
+                li.item-list.item-list--table developing theoretical models
+                li.item-list.item-list--table assimilating disparate observations into an aggregate explanation
+            td.table__cell
+              ul
+                li.item-list.item-list--table watching
+                li.item-list.item-list--table reflecting
+                li.item-list.item-list--table inductive procedures
+            td.table__cell.table__cell--term Assimilating (watching and thinking - AC/RO)
+
+          tr.table__row
+            td.table__cell(rowspan='2') ACTIVE EXPERIMENTATION (doing)
+            td.table__cell
+              ul
+                li.item-list.item-list--table doing new things
+                li.item-list.item-list--table new experiences
+                li.item-list.item-list--table carrying out plans and experimenting
+                li.item-list.item-list--table excel when they have to adopt to new situations
+            td.table__cell
+              ul
+                li.item-list.item-list--table using intuition
+                li.item-list.item-list--table repeating trials
+                li.item-list.item-list--table learning from mistakes
+            td.table__cell.table__cell--term Accommodating (doing and feeling - CE/AE)
+
+          tr.table__row
+            td.table__cell
+              ul
+                li.item-list.item-list--table practical application of ideas
+                li.item-list.item-list--table learning by doing and thinking
+                li.item-list.item-list--table hypothetical deductive reasoning
+            td.table__cell
+              ul
+                li.item-list.item-list--table unemotional
+                li.item-list.item-list--table deductive approach
+                li.item-list.item-list--table logical reasoning
+            td.table__cell.table__cell--term Converging (doing and thinking - AC/AE)
+
+        .text-post Kolb believed that we cannot perform both variables on a single axis at the same time (e.g. think and feel, watch and do). Our learning style is a product of these two choice decisions. It's often easier to see the construction of Kolb's learning styles in terms of a two-by-two matrix. Each learning style represents a combination of two preferred styles. Have you detected yours?
+
+    .article-content__chapter.chapter#03
+      h2.article-content__title Kolb's successors and their developments
+      p.text-intro After Kolb has introduced his learning theory, it was popularized and developed further. As a result there have been appeared several interesting learning models which a re useful to take into consideration. Switch between tabs below and discover more about yourself and your audience.
+
+      .kolb-other-block
+        .tab-block
+          button.tab-block__link(onclick="openTab(event, 'M01')" id="defaultOpen") Model #01
+          button.tab-block__link(onclick="openTab(event, 'M02')") Model #02
+          button.tab-block__link(onclick="openTab(event, 'M03')") Model #03
+
+        .tab-content#M01
+          h3.tab-content__title 4MAT Learning Model
+          p The 4MAT learning model is an extension of the Kolb model. However, it presents 4 different learning styles which include imaginative, analytical, dynamic, and common sense.
+          p This model suggests that individuals who base their learning on experiences are learners who fall in the category of common sense. Imaginative learners conceptualize these experiences, whereas analytical learners apply and refine the ideas too. Dynamic learners make use of all the steps but mainly base their learning on their personal interpretation.
+
+        .tab-content#M02
+          h3.tab-content__title Honey Mumford Model
+          p The Honey Mumford model is pretty similar to the Kolb model. It introduces the following learning styles:
+          ul.list
+            li.item-list #[span.accent Activists:] Active learners do things practically to gain knowledge from them.
+            li.item-list #[span.accent Theorists:] People who like to learn from existing facts and figures fall into this category.
+            li.item-list #[span.accent Pragmatists:] Such individuals conceptualize and experiment with ideas before they learn from them.
+            li.item-list #[span.accent Reflectors:] These learners reflect on what they see and learn from it.
+
+        .tab-content#M03
+          h3.tab-content__title Felder-Silverman Learning Style Model
+          p This learning model is focused on the fact that every individual has their own preference when it comes to the process of grasping new information. Certain individuals may have multiple preferences, some may shift from one to the other, and some have only one.
+          ul.list
+            li.item-list #[span.accent Active and reflective learners,] as the name suggests, are very hands-on. Active learning is their favorite method to learn.
+            li.item-list On the other hand, #[span.accent sensing and intuitive learners] focus on written facts and concepts. They can be presented with pre-existing ideas, and they will not have any issues memorizing them. For example, if a PR strategist can work better based on previous research instead of experimenting around in real-life situations with new ideas, it would account for this style.
+            li.item-list #[span.accent Sequential and global learners] prefer organized and systematic learning.
+            li.item-list #[span.accent Visual and verbal learners] go for supporting tools such as words and graphics.
+
+    .article-content__chapter.chapter#04
+      h2.article-content__title Kolb's recommendations
+      p Remember that experiential learning takes work and time; it should be purposeful and beneficial to your learning. Kolb and Kolb (2011, p. 61-62) suggest the following principles as a guideline:
+
+      ul.list
+        li.item-list respect learning and others' experience;
+        li.item-list begin learning with the experience of the subject matter;
+        li.item-list create and hold a hospitable space for learning;
+        li.item-list make space for conversational learning;
+        li.item-list make space for acting and reflecting;
+        li.item-list make space for feeling and thinking;
+        li.item-list make space for inside-out learning;
+        li.item-list make space for development of expertise;
+        li.item-list make space for learners to take char of their own learning.
+
+    .text-post Both Kolb's learning stages and cycle and his successors' ideas could be used by teachers to critically evaluate the learning provision typically available to students and by learners - to organize self-directed learning process in a most efficient way. Have you already found your style? Just test yourself below.

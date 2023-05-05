@@ -1,0 +1,158 @@
+extends layout/page-layout
+
+block variables
+  include ../pug/data/articles-data
+  - var article = articles[2]
+
+block content
+  section.article-content.section._wrap
+    p.text-intro.text-intro--main #{article.introText}
+
+    .article-content__chapter.chapter#01
+      h2.article-content__title Learning models review
+      h4.accent-block Active learning
+      p In this teaching model, the learner actively participates in #[span.tooltip(title='Bonwell CC, Eison JA. Active Learning: Creating Excitement in the Classroom (J-B ASHE Higher Education Report Series AEHE). Washington DC: Jossey-Bass; 1991. p. 1-4.') his/her learning] Active learning implies that:
+
+      ul.list
+        li.item-list Learners are involved in more than listening
+        li.item-list Less emphasis is placed on transmitting information and more on developing a student's skills
+        li.item-list Learners are involved in higher order thinking (analysis, synthesis and evaluation)
+        li.item-list Students are engaged in activities (e.g., reading, discussion and writing)
+        li.item-list Greater emphasis is placed on the student's exploration of his/her own values and attitudes.
+
+      .note Strategies promoting active learning include questions and debates, reflective activities and small group discussions, case studies, role-playing and more. Several authors suggest that active learning techniques may have greater effectiveness in medicine and other disciplines.
+
+      figure.image-block.image-block--center
+        img.article__image(src="img/active-learning.jpg", alt="Active learning and remembering")
+        figcaption.text-source Source of image: https://teachonline.asu.edu/
+
+      div While active learning it is important to remember about the 'Forgetting Curve'. Hermann Ebbinghaus's Forgetting Curve shows us how information is lost over time if you do not make an effort to retain it. The curve shows us that information leaks out of our brains at an exponential rate. In fact, we forget 50% of all information within an hour of learning it. And a week later, we'll have forgotten 90% of everything we've learned. In that sense, all learning activities could be characterised as a battle against The Forgetting Curve. But it's not all bad news. Ebbinghaus was also able to show that every time you reinforce information, the rate of decline decreases. Furthermore, this shows us the importance of spaced repetition and application within a learning context.
+
+      h4.accent-block Experiential learning
+      p This model, developed by David A. Kolb, considers the learning process as a "cycle of experience", which consists of #[span.tooltip(title='Kolb DA. Experiential learning: Experience as the source of learning and development. 1 st ed. Upper Saddle River (NJ): Prentice Hall; 1983. p. 20-38.') 4 steps]:
+
+      figure.image-block
+        img.article__image(src="img/kolbcycle.png", alt="Kolb cycle")
+        figcaption.text-source Source of image: https://www.verbaltovisual.com/sketchnoting-for-experiential-learners-vtv-episode-16/
+
+      ol.list
+        li.list-item.list-item--decimal The learner lives a concrete experience
+        li.list-item.list-item--decimal He/she observes and reflects on the experience from different perspectives
+        li.list-item.list-item--decimal He/she forms abstract concepts and generalizations
+        li.list-item.list-item--decimal He/she assesses the implications of the new concepts in new situations.
+
+      div This model suggests the inclusion of a variety of strategies during lectures, such as simulations, case studies, demonstrations and group discussions. The instructor uses these strategies to help the learner through the different steps of learning from the experience.
+      div This perspective is based on constructivist learning theories, which state that knowledge is linked to the context in which it occurs and that learning occurs from experience according to the personal meaning individuals give to it. The role of teaching is to provide contexts and assistance that helps individuals find meaning in knowledge according to the environment in which they perform.
+
+      h4.accent-block Reflective learning
+      div Donald A. Schön highlighted the importance of fostering reflection about what happens and why it happens, personal beliefs and feelings, errors, gaps and possible variables, in order to achieve meaningful learning when teaching professionals. Reflection during lectures may be encouraged through #[span.accent dialogues, questions and debates.]
+      div Reflection can be as well a structured process where you evaluate your experience as a whopping 70% of what we learn happens through on-the-job experience. This is a significant slice of the overall learning pie in the 70:20:10 model created in the 1980s by Morgan McCall and the Centre for Creative Leadership. Relying too heavily on formal training interventions (things like pre-set curricula, classroom events, dusty textbooks) will slow you down considerably. Instead, you should create an environment where informal, social and experiential learning thrives and is analyzed to improve!
+
+      h4.accent-block Superficial versus deep learning
+      div This concept refers to the preference by which students approach learning. Some prefer a deeper understanding (deep learning); others prefer to acquire only the facts (superficial learning). This preference is usually determined by content, context, needs and previous knowledge of the topic. Students tend to "strategically" choose how they learn topics according to the circumstances. Additionally, the evaluation system can condition the learning style. If the evaluation is based on recalling/reciting of facts, students willing to pass will choose a superficial approach. The use of reflection using questions and discussion during lectures promotes a deeper approach to learning.
+
+      figure.image-block.image-block--center
+        img.article__image(src="img/surface_deep.png", alt="From surface to deep knowledge skills")
+        figcaption.text-source Source of image: www.edweek.org/education
+
+    .article-content__chapter.chapter#02
+      h2.article-content__title Learning process
+      h4.accent-block Active learning
+      p Taylor and Hamdy propose a 5-stage process to explain how #[span.tooltip(title='Taylor DC, Hamdy H. Adult learning theories: Implications for learning and teaching in medical education: AMEE Guide No. 83. Med Teach 2013;35:e1561-72') learning occurs:]
+
+      dl.term-list.term-list--main
+        dt.term.term--main Dissonance:
+        dd.definition.definition--main The learner's existing knowledge is challenged and found to be incomplete.
+        dt.term.term--main Refinement:
+        dd.definition.definition--main The learner seeks out possible explanations or solutions to a problem (elaboration) and through completing tasks, research, reflection and discussion refines the new information into new concepts.
+        dt.term.term--main Organization:
+        dd.definition.definition--main The learner develops or restructures ideas considering the newly acquired information, making sense of it and organising it into schemata.
+        dt.term.term--main Feedback:
+        dd.definition.definition--main The learner articulates new knowledge and tests it against what his peers and teachers think which reinforces the schema or obliges its reconsideration.
+        dt.term.term--main Consolidation:
+        dd.definition.definition--main New reflection occurs about what was learned and how learning occurred.
+
+      p.note Teachers and learners have varied roles according to the stage; providing organizers (objectives, structure), encouraging reflection and giving feedback are key activities that should be integrated into lectures.
+
+      figure.image-block.image-block--center
+        img.article__image(src="img/taylor.png", alt="Five stages of learning process")
+        figcaption.text-source Source of image: http://dx.doi.org/10.3217/zfhe-9-01/10
+
+    .article-content__chapter.chapter#03
+      h2.article-content__title Adult Learner model
+      p.text-intro Adult learners, much like their younger counterparts, vary greatly in terms of their cognitive abilities, social and emotional considerations, and unique background situations. When taken together, along with content-specifc factors, education and training programs can better target what each learner requires to best meet their potential. That is how Adult Learner Model was structured in the Learner Variability Project (LVP).
+      p This framework is organized into four key categories-literacies, cognition, social-emotional, and learner background- and reveals how these categories interact to create a complex but meaningful picture of the whole learner.
+
+      figure.image-block.image-block--center
+        img.article__image(src="img/almodel.jpg", alt="Adult Learner Model")
+        figcaption.text-source Source: #[a.link--ref(href='https://lvp.digitalpromiseglobal.org/', target='_blank') Digital Promise Program]
+
+      .fact-menu
+        h3.fact-menu__title Factors (to open up)
+        ul.fact-menu__list.list
+          li.fact-menu__item
+            button.fact-menu__item--title.accordion Adult Literacies
+            ul.fact-menu__list--drop.panel
+              li.fact-menu__item--drop Background Knowledge
+              li.fact-menu__item--drop Composition
+              li.fact-menu__item--drop Digital Literacy
+              li.fact-menu__item--drop Disciplinary Literacy
+              li.fact-menu__item--drop Foundational Reading Skills
+              li.fact-menu__item--drop Numeracy
+              li.fact-menu__item--drop Oral Communication Skills
+              li.fact-menu__item--drop Problem Solving
+
+          li.fact-menu__item
+            button.fact-menu__item--title.accordion Cognition
+            ul.fact-menu__list--drop.panel
+              li.fact-menu__item--drop Attention
+              li.fact-menu__item--drop Auditory Processing
+              li.fact-menu__item--drop Cognitive Flexibility
+              li.fact-menu__item--drop Inhibition
+              li.fact-menu__item--drop Long term Memory
+              li.fact-menu__item--drop Metacognition
+              li.fact-menu__item--drop Reasoning
+              li.fact-menu__item--drop Short term Memory
+              li.fact-menu__item--drop Speed of Processing
+              li.fact-menu__item--drop Visual Processing
+              li.fact-menu__item--drop Working Memory
+
+          li.fact-menu__item
+            button.fact-menu__item--title.accordion Social and Emotional Learning
+            ul.fact-menu__list--drop.panel
+              li.fact-menu__item--drop Emotion
+              li.fact-menu__item--drop Learner Mindset
+              li.fact-menu__item--drop Motivation
+              li.fact-menu__item--drop Self regulation
+              li.fact-menu__item--drop Social Awareness and Relationship Skills
+              li.fact-menu__item--drop Stereotype Threat
+
+          li.fact-menu__item
+            button.fact-menu__item--title.accordion Background
+            ul.fact-menu__list--drop.panel
+              li.fact-menu__item--drop Adverse Experiences
+              li.fact-menu__item--drop Hearing
+              li.fact-menu__item--drop Literacy Environment
+              li.fact-menu__item--drop Physical Well being
+              li.fact-menu__item--drop Primary Language
+              li.fact-menu__item--drop Safety
+              li.fact-menu__item--drop Sleep
+              li.fact-menu__item--drop Socioeconomic Status
+              li.fact-menu__item--drop Vision
+              li.fact-menu__item--drop Visual Processing
+              li.fact-menu__item--drop Social Supports
+
+    .article-content__chapter.chapter#04
+      h2.article-content__title Summary for a good Learner
+      p In summary, current theories of adult learning emphasize that:
+
+      ul.list
+        li.item-list Learners need to have clear goals and objectives of what they will achieve by the teaching intervention (e.g., the lecture).
+        li.item-list Content should be relevant and useful to the learner's real life.
+        li.item-list Content should be connected to experience and previous knowledge.
+        li.item-list Learners should reflect about what they learn and how they learn.
+        li.item-list Learners should actively participate in their learning.
+        li.item-list Teaching should be learner-centred, i.e., consider theories by which adults learn and implement the most adequate strategies that help them learn, according to their needs, objectives and the context.
+        li.item-list The teacher's role changes from being a "transmitter" of knowledge to a "facilitator", that assists the students in their own learning, provides relevance to the content, offers examples of application to practice, invites reflection, motivates and helps to provide significant meaning to new knowledge.
+
+    .text-post If you are new to the world of instructional design or learning models and theories, you may well be feeling overwhelmed. There is an endless number of learning models to explore and approaches to consider. It can be difficult to know where to apply your focus. At this stage, you should train your focus on your target and personal motivation. Stay focused and keep learning!

@@ -1,0 +1,125 @@
+extends layout/page-layout
+
+block variables
+  include ../pug/data/articles-data
+  - var article = articles[4]
+
+block content
+  section.article-content.section._wrap
+    p.text-intro.text-intro--main #{article.introText}
+
+    .article-content__chapter.chapter#01
+      h2.article-content__title Aspects of reality to count with
+      p.text-intro As an Adult Learner / Facilitator of Adult Learners, please, consider these three major themes about modern learning environment and its learners with reference to some of the success factors and learning strategies:
+
+      ol.list
+        li.list-item.list-item--decimal Adults need a variety of 21st century foundational skills to survive and thrive. - Digital literacy and oral communication skills are critical to pursuing opportunities in the workforce and everyday life. Digital literacy helps adults access and navigate digital resources in their personal and professional lives and can impact their career and job trajectories. Oral communication skills, including both speaking and listening comprehension, allow adults to communicate with a variety of people in academic, workplace, personal, and peer contexts. In both cases, collaborative learning strategies such as peer feedback can strengthen these skills as well as learners' content knowledge. Problem solving skills encompass both critical thinking and creativity, which allow adults to evaluate evidence and generate novel solutions. These skills also require an understanding of how to interpret multimedia texts in new digital environments. Encouraging learners to use this new technology and create multimedia projects themselves builds confidence in these skills.
+        li.list-item.list-item--decimal Adults must see the benefit of learning tasks to fully engage. - Adults are independent learners who may have complex reasons for setting and persisting at learning goals, including self-improvement, supporting their children financially and in school, or obtaining a better job. Due to many competing pressures, adults must continually adapt their goals over time. To maintain their motivation in learning, addressing authentic scenarios and purposes allows them to see how new information can be used in the real world. Adults also bring many assets to their learning, including extensive background knowledge, but they may not recognize the value of that knowledge or have a strong self-concept as a learner. Incorporating learners' lived experiences and cultural practices into course materials and instruction can support building their learner mindset while also appreciating their everyday and academic prior knowledge.
+        li.list-item.list-item--decimal Engaging in lifelong learning activities is interconnected with general well-being. - Having greater emotional, cognitive, and physical well-being can positively impact learning; in turn, engaging in learning can improve adults' life satisfaction and outcomes such as income and social capital. Strategies that reduce stress such as mindfulness and physical activity can also improve attention and reduce cognitive decline. Adults can face barriers to learning that stem from their socioeconomic status, lack of social supports, or adverse experiences, including negative past experiences with schooling. Building self-advocacy and metacognitive skills allows learners to understand their own learning process and what they need to succeed.
+
+    .article-content__chapter.chapter#02
+      h2.article-content__title Stimuli and barriers
+
+      .impact-block.columns
+        .positive-block.column.column--half
+          p.text-intro.mark Factors that can POSITIVELY influence learning in adults:
+          dl.term-list.term-list--main.term-list--smile
+            dt.term.term--main.term--smile Social supports
+            dd.definition.definition--main Adults are more likely to persist in their education when they have strong social supports
+              dl.term-list
+                dt.term Emotional support
+                dd.definition by caring for and showing compassion to the learner;
+                dt.term Appraisal support
+                dd.definition by providing the learner with helpful feedback;
+                dt.term Instrumental support
+                dd.definition by contributing resources such as time and money;
+                dt.term Informational support
+                dd.definition by providing information and advice.
+            dt.term.term--main.term--smile Community resources
+            dd.definition.definition--main Local resources, such as libraries, play a critical role in building adults' digital literacy skills, which in turn allow them greater access to learning materials
+            dt.term.term--main.term--smile Motivation
+            dd.definition.definition--main Adults can develop digital literacy skills, particularly if they are motivated and see value in digital technology. Here is more information about #[a.text-link(href='motivation.html') fostering your motivation]
+            dt.term.term--main.term--smile Social awareness and Emotion
+            dd.definition.definition--main Older adults can use social technology to reduce loneliness which impacts emotional and physical health
+
+          .note Building social networks with access to new resources, termed social capital, is an important outcome of adult education, as learners gain the confidence and knowledge to interact with those beyond their social circles. Adults need to use complex social norms such as politeness and formality across social contexts. Peer relationships can be particularly important during transitions, for example the transition to college, especially for adults who have difficulty with relationships. Social Awareness and Relationship Skills are also critical in online environments for both successful networking and learning.
+
+        .negative-block.column.column--half
+          p.text-intro.mark Factors that can NEGATIVELY influence learning in adults:
+
+          dl.term-list.term-list--main
+            dt.term.term--main.term--warning Adverse childhood experiences
+            dd.definition.definition--term Adults who experienced abuse as children are at greater risk for having working memory defcits.
+            dt.term.term--main.term--warning Housing insecurity
+            dd.definition.definition--term Poor housing conditions, often due to poverty, are associated with poorer sleep quality in adults, which in turn impacts the ability to focus on learning.
+            dt.term.term--main.term--warning Trauma
+            dd.definition.definition--term Exposure to trauma can begin in childhood, and have lasting consequences into adulthood, including our needs, skills and motivation for learning and developing...
+
+          .note Trauma can come from many types of experiences: negative schooling experiences in childhood, including being bullied or ridiculed by other students or teachers, family issues, interpersonal relations, crisis and accidents. These, among other Adverse Experiences, can result in long-term changes to health, behavior, social skills, and brain structure and functioning, and have the potential to increase the risk for learning disabilities and ADHD. These effects can have far-reaching consequences on academic outcomes and may also result in additional trauma through the loss of Social Supports and feelings of Safety. Take care about your physical and psychological health and do preventives!
+
+      .text-source Source: #[a.link--ref( href="https://lvp.digitalpromiseglobal.org/", target="_blank") Digital Promise Program]
+
+    .article-content__chapter.chapter#03
+      h2.article-content__title Support the Learner (in you)
+      p.text-intro Neuroscience tells us about how to maximize our learning potential and here are eight things you can do to make learning (be it a new skill, a new language, or material at school) more effective.
+
+      .tip-block__container
+        .tip-card
+          .tip-card__side-one.averse
+            .tip-card__title Tip #1
+          .tip-card__side-two.reverse
+            .tip__title Improve Your Memory
+            p.tip__content For example, you might use general learning techniques like setting aside quiet time to study, rehearsing, and reading information aloud. You might combine this with strategies that can foster better memory, such as exercising and socializing. And please get regular physical exercise, which is linked to improvements in memory and brain health as well as enough sleep.
+
+        .tip-card
+          .tip-card__side-one.averse
+            .tip-card__title Tip #2
+          .tip-card__side-two.reverse
+            .tip__title Keep Learning New Things
+            p.tip__content One sure-fire way to become a more effective learner is to simply keep learning. Research has found that the brain is capable of producing new brain cells, a process known as neurogenesis. However, many of these cells will eventually die unless a person engages in some type of effortful learning. By learning new things, these cells are kept alive and incorporated into brain circuits. Plus if you want to maintain the new information you just learn to stay put, keep practicing and rehearsing it.
+
+        .tip-card
+          .tip-card__side-one.averse
+            .tip-card__title Tip #3
+          .tip-card__side-two.reverse
+            .tip__title Learn in Multiple Ways
+            p.tip__content For example, if you are learning a new language, try varying techniques such as listening to language examples, reading written language, practicing with a friend, and writing down your own notes. One helpful tip is to try writing out your notes on paper rather than typing on a laptop, tablet, or computer. Research has found that longhand notes can help cement information in memory more effectively than digital note-taking.
+
+        .tip-card
+          .tip-card__side-one.averse
+            .tip-card__title Tip #4
+          .tip-card__side-two.reverse
+            .tip__title Teach What You Are Learning
+            p.tip__content You can apply this principle today by sharing newly learned skills and knowledge with others. Start by translating the information into your own words. This process alone helps solidify new knowledge in your brain. Next, find some way to share what you've learned. Some ideas include writing a blog post, creating a podcast, or participating in a group discussion.
+
+        .tip-card
+          .tip-card__side-one.averse
+            .tip-card__title Tip #5
+          .tip-card__side-two.reverse
+            .tip__title Build on Previous Learning
+            p.tip__content Another great way to become a more effective learner is to use relational learning, which involves relating new information to things that you already know. For example, if you are learning a new language, you might associate the new vocabulary and grammar you are learning with what you already know about your native language or other languages you may already speak.
+
+        .tip-card
+          .tip-card__side-one.averse
+            .tip-card__title Tip #6
+          .tip-card__side-two.reverse
+            .tip__title Gain Practical Experience
+            p.tip__content While seeing information and then writing it down is important, actually putting new knowledge and skills into practice can be one of the best ways to improve learning. If it is a sport or athletic skill, perform the activity on a regular basis. If you are learning a new language, practice speaking with another person and surround yourself with language-immersion experiences.
+
+        .tip-card
+          .tip-card__side-one.averse
+            .tip-card__title Tip #7
+          .tip-card__side-two.reverse
+            .tip__title Don't Be Afraid to Make Mistakes
+            p.tip__content Research suggests that making mistakes when learning can actually help improve outcomes, especially if you correct your mistake and take the time to understand why it happened. It can help foster critical thinking skills and make you more adaptable in learning situations that require being able to change your mind.
+
+        .tip-card
+          .tip-card__side-one.averse
+            .tip-card__title Tip #8
+          .tip-card__side-two.reverse
+            .tip__title Stop Multitasking, Focus!
+            p.tip__content According to research, doing this not only makes people less productive when they work but also impairs attention and reduces comprehension. Multitasking when you are studying makes it harder to focus on the information and reduces how much you understand it. As well as dividing attention between different media sources. Start by focusing your attention on the task at hand and continue working for a predetermined amount of time.
+
+      .text-source Source: #[a.link--ref(           href="https://www.verywellmind.com/how-to-become-a-more-effective-learner-2795162", target="_blank") VeryWellMind portal]
+
+    .text-post Have you been inspired by these ideas and tricks how to help yourself to learn more efficiently? What can you implement already today to start enjoy learning more? Are there any life obstacles to count with and prepare alternative strategies?

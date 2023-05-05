@@ -1,0 +1,46 @@
+extends layout/home-layout
+
+block variables
+  - var pageClass = 'index-page'
+
+block main
+  main.main(class = pageClass)
+    .hero._wrap
+      .hero__slider
+        img.slider__image(
+          src="img/main_hero_1.jpg"
+          alt="einstein is an adult learner too"
+          width="960"
+          height="670"
+        )
+      .hero__text
+        h1.hero__title #[span.accent A]dult #[span.accent L]earning
+        .hero__welcome As adults, we need to know why we need to learn something before undertaking to learn it. We need to know how learning will be conducted, what learning will occur and why learning this is important personally to us. There is a whole science around it. Welcome to the resource platform designed for adult learners and their teachers.
+        .hero__buttons.button-box
+          a.hero__button(href="andragogy.html") What is Andragogy
+
+    .wrapper
+      block read
+        include modules/read-block.pug
+
+      block test
+        section.test-block.section._wrap#test
+          include modules/test-block.pug
+          append test
+            .test__content
+              .test-block__title.section__title
+                p.subtitle Test
+                h2.title Learning Style
+              .test__excerpt Over the years, you have probably developed learning habits that help you benefit more from some experiences than from others. You may be unaware of this, and this questionnaire will help you pinpoint your learning preferences and share them with the others.
+
+      block inspire
+        section.inspire-block.section#quotes
+          include modules/inspire-block.pug
+
+      block gallery
+        section.gallery-block.section._wrap#mindmaps
+          include modules/gallery-block.pug
+
+      block search
+        section.search-block.section
+          include modules/search-block.pug

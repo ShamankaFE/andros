@@ -1,0 +1,177 @@
+extends layout/page-layout
+
+block variables
+  include ../pug/data/articles-data
+  - var article = articles[0]
+
+block content
+  section.article-content.section._wrap
+    p.text-intro.text-intro--main #{article.introText}
+
+    .article-content__chapter.chapter#01
+      h2.article-content__title Roots of Andragogy as a science
+      figure.image-block.image-block--right
+        img.article__image(
+          src="img/andragogy.jpg"
+          alt="andragogy as a term"
+        )
+        figcaption.text-source Source of image: https://elearningindustry.com/the-adult-learning-theory-andragogy-of-malcolm-knowles
+      p The notion of #[span.accent andragogy] has been around for nearly two centuries. It became particularly popular in North America and Britain as a way of describing adult learning through the work of Malcolm Knowles. When adult education first became popular in the early 1900s, it was assumed that the same methods and techniques used to teach children could also be applied to adults. In fact, pedagogy has come to mean the art and science of teaching, even though its Greek root words actually mean leading children.
+
+      include modules/timeline
+
+    .article-content__chapter.chapter#02
+      h2.article-content__title Learning theories
+      p.text-intro Since, Eduard C. Lindeman's pioneer paper in 1926, The Meaning of Adult Education, which awakened interest in and set the basis for the systematic research about how adults learn, educators and psychologists have contributed to the development of many varied theories and hypothesis about the learning characteristics of adults. Taylor and Hamdy summarized the learning theories and classified them in the following categories:
+      div
+        dl.term-list.term-list--main
+          dt.term.term--main Instrumental learning theories
+          dd.definition.definition--main - all these theories focus on the learner's individual experience, one side/aspect of it:
+            dl.term-list.term-list--sub
+            dt.term Behavioural learning theories
+            dd.definition - Stimuli in the environment can produce changes in behaviour
+            dt.term Cognitive learning theories
+            dd.definition - Learning is focused on mental and psychological processes, perception and processing of information not in behaviour
+            dt.term Experiential learning
+            dd.definition - Learning is focused on the development of competencies and skills in a specific context
+        dl.term-list.term-list--main
+          dt.term.term--main Humanistic theories
+          dd.definition.definition--main - centered on the learner, these theories focus on an individual's potential for self-actualization, self-direction and internal motivation:
+            dl.term-list.term-list--sub
+            dt.term Andragogy
+            dd.definition - The explanation of adults' motivation and disposition to learning
+            dt.term Self-directed learning
+            dd.definition - The suggestion that students can plan, conduct and assess their own learning
+        dl.term-list.term-list--main
+          dt.term.term--main Transformative learning theory
+          dd.definition.definition--main - explores how critical reflection can be used to challenge a learner's beliefs and assumptions.
+        dl.term-list.term-list--main
+          dt.term.term--main Social theories of learning
+          dd.definition.definition--main - these require the &ldquo;two crucial&rdquo; elements of context and community. They include cognitive situated theories that consider learning and thinking as social activities taking place in a community and influenced by context.
+        dl.term-list.term-list--main
+          dt.term.term--main Motivational models
+          dd.definition.definition--main - these emphasize the value of internal motivation and reflection as necessary for learning.
+        dl.term-list.term-list--main
+          dt.term.term--main Reflective models
+          dd.definition.definition--main - these hold that reflection lends to change. Reflective learning and deliberate practice theories are examples of these models.
+      p As shown by this classification, the theories are numerous. Elements from all of them may be applied to explain how adults learn; although none of them is complete on its own (all of them have limitations).
+
+    .article-content__chapter.chapter#03
+      h2.article-content__title Adult Learning (Andragogy) principles
+      h4.accent-block Principles
+
+      p.text-intro Adult learning is based upon comprehension, organization and synthesis of knowledge rather than rote memory. There are seven principles of Adult Learning and first 4 of them were introduced by M. Knowles (Kearsley, 2010):
+
+      ul.list.list--right-buttons
+        li.list-item Adults need to be involved in the planning and evaluation of their instruction.
+        li.list-item Experience (including mistakes) provides the basis for learning activities.
+        li.list-item Adults are most interested in learning subjects that have immediate relevance to their job or personal life.
+        li.list-item Adult learning is problem-centered rather than content-oriented.
+
+      p Compare it to the full version of Adult Learning principles (Wikipedia):
+
+      ol.list
+        li.list-item.list-item--decimal #[span.accent Adults must want to learn] - They learn effectively only when they are free to direct their own learning and have a strong inner and excited motivation to develop a new skill or acquire a particular type of knowledge, this sustains learning.
+        li.list-item.list-item--decimal #[span.accent Adults will learn only what they feel they need to learn] - Adults are practical in their approach to learning; they want to know, "How is this going to help me right now? - Is it relevant (Content, Connection and Application) and does it meet my targeted goals."
+        li.list-item.list-item--decimal #[span.accent Adults learn by doing] - Adolescents learn by doing, but adults learn through active practice and participation. This helps in integrating component skills into a coherent whole.
+        li.list-item.list-item--decimal #[span.accent Adult learning focuses on problem solving] - Adolescents tend to learn skills sequentially. Adults tend to start with a problem and then work to find a solution. A meaningful engagement, such as posing and answering realistic questions and problems is necessary for deeper learning. This leads to more elaborate, longer lasting, and stronger representations of the knowledge.
+        li.list-item.list-item--decimal #[span.accent Experience affects adult learning] - Adults have more experience than adolescents. This can be an asset and a liability, if prior knowledge is inaccurate, incomplete, or naive, it can interfere with or distort the integration of incoming information.
+        li.list-item.list-item--decimal #[span.accent Adults learn best in an informal situation] - Adolescents have to follow a curriculum. Often, adults learn by taking responsibility by the value and need of content they have to understand and the particular goals it will achieve. Being in an inviting, collaborative and networking environment as an active participant in the learning process makes it efficient.
+        li.list-item.list-item--decimal #[span.accent Adults want guidance and consideration as equal partners in the process] -  Adults want information that will help them improve their situation. They do not want to be told what to do and they evaluate what helps and what doesn't. They want to choose options based on their individual needs and the meaningful impact a learning engagement could provide. Socialization is more important among adults.
+
+      h4.accent-block Application
+      p Knowles (1984) provides an example of applying andragogy principles to the design of personal computer training:
+
+      ul.list.list--left-buttons
+        li.list-item There is a need to explain the reasons specific things are being taught (e.g., certain commands, functions, operations, etc.)
+        li.list-item Instruction should be task-oriented instead of promoting memorization - learning activities should be in the context of common tasks to be performed by the others.
+        li.list-item Instruction should take into account the wide range of different backgrounds of learners; learning materials and activities should allow for different levels/types of previous experience with computers.
+        li.list-item Since adults are self-directed, instruction should allow learners to discover things and knowledge for themselves without depending on people. However, learners should be offered guidance and help when mistakes are made.
+
+      div Educators teaching adult learners need to know the concepts of the adult learning theory and be able to incorporate them into their teaching style. Educators need to become #[span.accent facilitators] of adult education, helping the adult learner to set and achieve goals and guide them in choosing the subjects and courses needed to fulfill these goals. They need to keep in mind that the adult learner needs to know why the course is important to their learning and life situation. The adult learner brings into the continuing educational arena a rich array of experiences that will affect the learning styles and assimilation of knowledge. Adult learners need to be able to apply the knowledge into their life situations.
+
+      p.note In a constructive approach teachers should see themselves as facilitators and co-learners. Teachers must bear in mind, however, that learners are individuals with different life experiences and learning preferences.
+
+      h4.accent-block Optimal Adult Learning
+      p Neuroscientist and educator Eric Jensen's factors for optimal learning (Jensen, 1998) include:
+
+      ul.list.list--left-buttons
+        li.list-item Whether the material has personal meaning to the learner;
+        li.list-item Circumstances present;
+        li.list-item Personal-concept (a person's collection of thoughts about beliefs, experiences, values and knowledge);
+        li.list-item Mode of sensory input (visual, auditory, kinesthetic, olfactory, gustatory);
+        li.list-item Information processing (learning styles, processing states like linear, holistic, random, logical, concrete, reality based, temporal, non-temporal...etc., artistic/analytic orientation, abstract/concrete... etc.);
+        li.list-item Responses (theory of multiple intelligences).
+
+      p.note Some adult learners will still prefer the traditional pedagogical approach to teaching and learning as they simply used to it from school. Teachers should respect that, but gradually try to push learners away from their comfort zone in the direction of a deeper approach to learning.
+
+      .summary
+      figure.image-block
+        img.article__image(
+          src="img/knowles.jpg"
+          alt="Professor Malcolm Knowles"
+          width="264"
+          height="320"
+        )
+        figcaption.text-source Source of image: www.halloffame.outreach.ou.edu
+      .text-post Dr. Knowles and his predecessors opened the doors of inquiry and the study of adult education. There is a need to continue their studies and to continue to support, design and implement curriculums tailored to the educational needs of the adult learner in today's society. With advancing technology, there is a continuing need to re-educate and provide continuing education in the academic as well as the business and industrial environment.
+
+    .article-content__chapter.chapter#04
+      h2.article-content__title Differences from Pedagogy
+      p.text-intro Here are some of the main differences between pedagogy and andragogy:
+
+      .image-wrap.image-wrap--pedagogy
+        table.table-compare.table.table--image
+          caption Source: Wikipedi
+          tr.table__row.table__row--header
+            th.table__cell.table__cell--header Criterium
+            th.table__cell.table__cell--header PEDAGOGY
+            th.table__cell.table__cell--header ANDRAGOGY
+          tr.table__row
+            td.table__cell Learner
+            td.table__cell
+              ul
+                li.item-list.item-list--table The learner is dependent on the instructor, the teacher schedules all the activities; determining how, when and where they should take place
+                li.item-list.item-list--table Teacher is the one who is responsible for what is taught and how it is taught
+                li.item-list.item-list--table Teacher evaluates the learning
+            td.table__cell
+              ul
+                li.item-list.item-list--table Learner is self-directed and moves towards independence
+                li.item-list.item-list--table Learner is responsible for the learning
+                li.item-list.item-list--table Self-evaluation is seen
+          tr.table__row
+            td.table__cell Learner's experience
+            td.table__cell
+              ul
+                li.item-list.item-list--table There is little experience which could be gained from this kind of learning
+                li.item-list.item-list--table Method is didactic
+            td.table__cell
+              ul
+                li.item-list.item-list--table There is large quantity of experience gained
+                li.item-list.item-list--table Method used is problem solving, discussion, service-learning
+          tr.table__row
+            td.table__cell Readiness to learn
+            td.table__cell
+              ul
+                li.item-list.item-list--table Standardized curriculum set which will be based on societal needs
+            td.table__cell
+              ul
+                li.item-list.item-list--table Curriculum is more application based and it revolves around life
+          tr.table__row
+            td.table__cell Orientation to learning
+            td.table__cell
+              ul
+                li.item-list.item-list--table Here, it is a process of acquiring subject matter
+            td.table__cell
+              ul
+                li.item-list.item-list--table Here learning is for performing tasks and solving problems
+          tr.table__row
+            td.table__cell Motivation
+            td.table__cell
+              ul
+                li.item-list.item-list--table Motivation is by external pressure, and there is lot of competition for grades
+            td.table__cell
+              ul
+                li.item-list.item-list--table It is driven by internal motivation. Includes self-actualization, self-confidence etc.
+
+      .text-post Do you feel those differences on your skin when learning? What approach is closer to you and why? Have you become more aware of specifics and importance of Andragogy as an applied science?

@@ -1,0 +1,179 @@
+extends layout/page-layout
+
+block variables
+  include ../pug/data/articles-data
+  - var article = articles[5]
+
+block content
+  section.article-content.section._wrap
+    p.text-intro.text-intro--main #{article.introText}
+
+    .article-content__chapter.chapter#01
+      h2.article-content__title Microlearning theory
+      p.text-intro The whole concept of microlearning is based on the Hermann Ebbinghaus forgetting curve. During his studies, he tested subjects on their memory of sets of inconsequential, erroneous sounds and syllables. Throughout these trials, he began assessing the capabilities and function of memory in his subjects. What has he discovered?
+      p Ebbinghaus noted that memory does not stay consistent throughout trials. Memory can increase, decrease, and back again many times. Of course, this also depends on not only the subject matter being learned but also the methods in which it is learned. These methods and studies also correspond to his studies on forgetting, and ultimately his "forgetting curve." This also led to the discovery of memory 'savings.' Memory saving refers to knowledge once held at the top of the mind, in complete (or at least relatively complete) accuracy, and the retention of the information thereafter. He found that strictly memorized information can be recalled much more easily after learning it again, even after a significant time without using it.
+
+      figure.image-block
+        img.article__image(src="img/forgetting-curve.png", alt="The Ebbinghaus Forgetting Curve graph")
+        figcaption.text-source Source of image: www.valamis.com/hub/microlearning
+
+      div As it demonstrates, people typically lose 80% of the knowledge they learn within a month. When people learn large amounts of information, they do retain it for a certain amount of time. However, if that information isn't considered 'crucial' to the tasks at hand, the knowledge tends to degrade over time. The microlearning concept can be used to tackle this issue. Splitting the content into small pieces and recalling different parts of it over time can help improve knowledge retention and productivity. Microlearning can really improve on-the-job training because employees will learn in a short period of time, and without disrupting their daily tasks. It is possible because microlearning works with the brain to prioritize information that may be more relevant to a daily workflow.
+
+      h5 Challenges of microlearning
+
+      ol.list
+        li.list-item.list-item--decimal #[span.accent--bold It takes work and resources to maintain.] One of the biggest myths about microlearning is that it is easy to create and maintain learning materials. Unfortunately, it isn't true. On the employer's side, microlearning programs can take time, resources, and plenty of effort to maintain. You may already have plenty of courses and training materials at your disposal. And just simply splitting them into smaller segments isn't always effective. #[br] You need to take time to plan out your microlearning modules and make sure they're relevant for the employees using them. This can also become complicated because you need to ensure that each session makes sense on its own, and can fit into a greater, sequential part of learning (to make sense with courses that come before and after it). Another point to remember is that you will need to periodically update your microlearning content as technology and business procedures change over time (and sometimes very rapidly).
+        li.list-item.list-item--decimal #[span.accent--bold Scaling personalized content.] Personalizing millions of pieces of content so that they are relevant to every individual person can be extremely tedious or even impossible. Because microlearning courses are very short pieces, it means that a full, traditional course could be split into many dozens of microlearning courses. #[br] For the entirety of a company's training materials, that could ultimately result in thousands of different modules or even much more.Going through all this information, personalizing it, and directing it to the right individuals can be extremely difficult. Instructional designers need to figure out how to organize that information, and direct it to the individuals it's relevant to.
+        li.list-item.list-item--decimal #[span.accent--bold Accessibility problem.] If just splitting the large course into short microlearning chunks isn't an easy task, imagine how difficult it is to make it accessible for people with disabilities. It's still a large task for instructional designers and requires specific knowledge and technologies. Designers need to make sure that the courses are formatted and optimized according to accessibility standards and best practices.
+        li.list-item.list-item--decimal #[span.accent--bold Lack of time to invest.] Ultimately, some employees are just in high demand and incredibly short on time, no matter what. These employees may still have time to research small issues that need to be resolved on their own. However, it can also be quite a struggle for them to find time throughout their day (no matter how accessible the courses are) to participate in mandated microlearning courses. #[br] If employees struggle to find time to follow a microlearning course, it's also fairly likely that they can't find the extra time to independently research even small tasks that would make their jobs easier.
+
+    .article-content__chapter.chapter#02
+      h2.article-content__title Just In Time and other microlearning principles
+      .text-intro Mobile tech and Google rebooted the way we demand and consume information. We expect to be able to find the info we need instantly, and we're not inclined to wade through a three-hour course to extract a nugget we could Google in seconds. But it's not that we don't want to learn. You could argue we've entered a golden age for eLearning, where digital technology, job insecurity, and sophisticated marketing have intersected to create demand for learning as never before. However, that hunger for learning is fighting with our lack of time, and the clear winner is microlearning.
+      p Google defines a micro-moment from the consumer's perspective as an #[span.accent "intent-richmoment, when a person turns to adevice to act on a need-to know, do, go or buy."] During these moments, the brand should "be there, be useful and be accountable." From the learning perspective, this would be a need-rich moment, when a learner turns to a form of microlearning (like a mobile app or a short document) to quickly know something, and learn what to do and how to do it in order to achieve a specific need. For the learning to stick, it must be easily available (searchable), serve its purpose and put things in perspective (for example, where to go to know more) rather than leave the learner in limbo.
+      p Developed by Dr. Conrad Gottfredson and Bob Mosher, the 5 Moments of Learning Model, also known as the Workflow Model, is essentially about learning at the five moments of need while working. The five moments are:
+
+      ul.list.list--left-buttons
+        li.list-item New - when people are learning how to do something for the first time.
+        li.list-item More - when people are expanding on what they have learned.
+        li.list-item Apply - when they need to act upon what they have learned.
+        li.list-item Solve - when problems arise, or the results are not as expected.
+        li.list-item Change - when people need to learn another way of doing something, requiring a new skill.
+
+      p Microlearning enthusiast Josh Bersin advocates for content "that immediately teaches what we need to know, that inserts itself at the time of need, and is so interesting that we remember it after only a few minutes." We're talking about learning in the flow of work and life.
+
+      h4.accent-block Just-in-time microlearning principles include:
+
+      ul.list.list--right-buttons
+        li.list-item Making it easy for learners to find the information they want when they need it
+        li.list-item Answering questions with highly targeted information
+        li.list-item Being platform-agnostic so learners can access learning whenever, wherever
+        li.list-item Engaging snackable content formats like micro video or audio, graphics, quizzes, and other interactive learning tools
+        li.list-item More sophisticated microlearning may even offer a choice of formats to cater to different content preferences
+        li.list-item Reducing barriers by making learning in short hits accessible and rewarding
+
+      .note Microlearning misses the mark when it's oversimplified. Microlearning isn't simply taking conventional learning content and chunking it up into small helpings.
+
+      h4.accent-block Gamification
+      p Another contemporary development that lends itself to microlearning is gaming technology, with gamification techniques often used to make microlearning even more engaging. Gaming elements like quizzes, puzzles, interactive scenes, incentives and rewards, progress tracking or leader boards, all appeal to our competitive nature and encourage developing a learning habit.
+
+      h4.accent-block Sophisticated Visuals, Storytelling, UX
+      p Digital marketing is steeped in the psychology of persuasion, and L&D developers can learn a lot from marketers. Quality microlearning adopts three key digital marketing tools.
+
+      ol.list
+        li.list-item.list-item--decimal #[span.accent Visual aesthetic] is central to engagement and enjoyment of learning. Beautiful design is everywhere, and if eLearning doesn't match the sophisticated digital aesthetic learners have grown to expect, it'll be perceived as second best.
+        li.list-item.list-item--decimal #[span.accent Storytelling] is central to learning and microlearning is no exception, with micro scenarios being the perfect device to hook people in and make a concept relevant and relatable.
+        li.list-item.list-item--decimal #[span.accent User experience,] or UX, is the art of using data-driven insights to carefully craft a digital experience to be intuitive, frictionless, and enjoyable.
+
+      figure.image-block.image-block--center
+        img.article__image(src="img/microlearning_skinny.webp", alt="Online assistant Skinny")
+        figcaption.text-source Source: https://elearningindustry.com/microlearning-in-2022-miraculous-or-overrated
+
+    .article-content__chapter.chapter#03
+      h2.article-content__title Best practices of microlearning (TOP-10)
+      p.text-intro The benefits of microlearning make it an attractive option. If you're thinking of converting your training programs to microlearning courses, you need the right strategy. Review these guidelines and first steps for creating online courses that engage your audience and enhance learning (borrowed from a portal #[a.accent(href='https://elearningindustry.com/from-learning-to-microlearning-how-to-redesign-your-training', target='_blank') elearningindustry.com]).
+
+      .practice-block
+        button.collapsible 1. Keep It Short And To The Point
+        .collapsible__content
+          p According to Josh Bersin, today's employees are stressed, impatient, and distracted. This implies that, depending on whether the training seems relevant and will fit into their busy schedules, your learners will decide whether or not to continue with it in 5-10 seconds. In our opinion, a microlearning lesson should last 3-5 minutes.
+        button.collapsible 2. Make It Simple To Begin…And To Continue Learning
+        .collapsible__content
+          p In a few clicks, learners will decide if your learning platform is worthwhile. Making it simple to find is the first step. Most eLearning platforms require a lot of effort to sign in, and once you do, they automatically log you out. The idea of microlearning, which demands instant access, is incompatible with this.
+          .note Be sure to note how many stages there are in order to get started. Make sure that learners may remain logged in on the learning platform once they have identified themselves through the first activation step; they shouldn't have to do this more than once.
+        button.collapsible 3. Make Your Microlearning Accessible On Mobile Devices
+        .collapsible__content
+          p As previously stated, the concurrent rise in popularity of microlearning and mobile learning is not a coincidence; rather, they complement one another. When developing your learning, take into account how people use their mobile phones as opposed to how your existing eLearning is structured. As a result, you can build on the learner's familiar and intuitive behavior, without having to educate them on how to use the learning tool on top of everything else.
+        button.collapsible 4. Use Videos
+        .collapsible__content
+          p Video content is enjoyable for everyone, so incorporate it into your microlearning. The "keep it brief" rule still applies because people have two minutes of attention span. Utilize relatable examples that your students can relate to, and underline essential points with text and visuals displayed on the screen to improve information retention. To make things simpler for students who don't want to turn on the audio because they lost their headphones on a crowded train, add subtitles.
+        button.collapsible 5. Become Accustomed To Learning Something New Every Day
+        .collapsible__content
+          p Corporate training, in our opinion, must be done the same way: in quick bursts, as needed, on our cellphones, or even on the fly. For microlearning to be effective in causing behavior change and producing business results, it must be practiced frequently. Present your students with brief, pertinent courses and morsels of essential knowledge so they can dive in. When they check into their microlearning, they should always discover something fresh and interesting.
+        button.collapsible 6. Use Spaced Repetition To Your Advantage
+        .collapsible__content
+          p According to the theory of spaced repetition, learning occurs when new skills and ideas are gradually introduced to the brain, with breaks for reflection. The only way to prevent knowledge loss afterward is to repeat the process repeatedly. New information is quickly forgotten. The study also demonstrates that by asking people questions to make us search for information, and by repeating material at regular intervals, we can create new learning pathways. It is comparable to how you learn when working, where you repeat tasks and challenge your knowledge.
+        button.collapsible 7. Use A Conversational, Lighthearted Tone
+        .collapsible__content
+          p When someone mentions "corporate training," most individuals become uneasy because they automatically picture something boring and monotonous. Use interaction, a conversational approach, and a hint of humor to eliminate these misconceptions. You must create a strong pull effect if you want to regularly draw in learners. Remove all limitations based on tradition.
+        button.collapsible 8. Create Clear Learning Paths
+        .collapsible__content
+          p One of the benefits of microlearning is that the short lessons can also be handy resources. Learners can search them for one specific point they want to learn or review. However, when you're talking about training, you need people to complete a whole series of minicourses.
+        button.collapsible 9. Help them out by providing direction
+        .collapsible__content
+          p Outline the order of lessons. Make sure people can quickly see which lessons they've completed and what they've got left. Also, consider linking lessons so they can move directly from one to the next as they finish them.
+        button.collapsible 10. Reinforce Knowledge
+        .collapsible__content
+          p Putting a quiz at the end of a lesson will boost learning. It'll help people cement their understanding of the single concept in that lesson. To reinforce the idea of training flow, add a longer quiz to the end of a series of minicourses that make up a broader topic. Reviewing all of the concepts together will help people make the connections and see the bigger picture.
+
+    .article-content__chapter.chapter#04
+      h2.article-content__title Microlearning examples
+
+      .tip-block__container
+        .tip-card
+          .tip-card__side-one.averse
+            .tip-card__title.tip-card__title--small Microcopy
+          .tip-card__side-two.reverse
+            .tip__title.tip__title--small Short, targeted, highly contextual messages or hints, to help users learn.
+            p.tip__content
+            ul.list
+              li.item-list.item-list--contrast Error messages
+              li.item-list.item-list--contrast Contact form explainers
+              li.item-list.item-list--contrast eCommerce hints
+
+        .tip-card
+          .tip-card__side-one.averse
+            .tip-card__title.tip-card__title--small Microlearning videos
+          .tip-card__side-two.reverse
+            .tip__title.tip__title--small Short, focused videos that are designed to meet a specific learning outcome.
+            p.tip__content
+            ul.list
+              li.item-list.item-list--contrast Micro-lectures
+              li.item-list.item-list--contrast Brief & interactive videos
+              li.item-list.item-list--contrast Whiteboard animations
+
+        .tip-card
+          .tip-card__side-one.averse
+            .tip-card__title.tip-card__title--small Microlearning apps
+          .tip-card__side-two.reverse
+            .tip__title.tip__title--small Apps that give you micro-lessons, on-the-go, mobile apps.
+            p.tip__content
+            ul.list
+              li.item-list.item-list--contrast Youtube
+              li.item-list.item-list--contrast Google
+              li.item-list.item-list--contrast TED
+
+        .tip-card
+          .tip-card__side-one.averse
+            .tip-card__title.tip-card__title--small Micro-challenges and games
+          .tip-card__side-two.reverse
+            .tip__title.tip__title--small Learning that is scored at the end, that can include an award, benefits, badges, notoriety, or other incentives.
+            p.tip__content
+            ul.list
+              li.item-list.item-list--contrast Multiple question quizzes
+              li.item-list.item-list--contrast Polls, flashcards, FAQ
+              li.item-list.item-list--contrast Simulations
+
+        .tip-card
+          .tip-card__side-one.averse
+            .tip-card__title.tip-card__title--small Infographics
+          .tip-card__side-two.reverse
+            .tip__title.tip__title--small Infographics are graphic visual representations of information, data, or knowledge.
+            p.tip__content
+            ul.list
+              li.item-list.item-list--contrast Statistical / Geographic
+              li.item-list.item-list--contrast Timeline / Process
+              li.item-list.item-list--contrast Comparison / Hierarchical / List
+
+        .tip-card
+          .tip-card__side-one.averse
+            .tip-card__title.tip-card__title--small Social Media
+          .tip-card__side-two.reverse
+            .tip__title.tip__title--small Сan be used as a micro-blogging exercise, and you can learn nuggets of information from the stream of content you subscribe to.
+            p.tip__content
+            ul.list
+              li.item-list.item-list--contrast Facebook
+              li.item-list.item-list--contrast LinkedIn
+              li.item-list.item-list--contrast Reddit
+
+    .text-post Microlearning may not be easy. But its time has come. Technology, the way we work, and the way we consume content have converged to create a landscape where microlearning's the natural choice. Challenge yourself to be in pace with the Time!

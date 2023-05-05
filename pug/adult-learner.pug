@@ -1,0 +1,75 @@
+extends layout/page-layout
+
+block variables
+  include ../pug/data/articles-data
+  - var article = articles[1]
+
+block content
+  section.article-content.section._wrap
+    p.text-intro.text-intro--main #{article.introText}
+
+    .article-content__chapter.chapter#01
+      h2.article-content__title Specific traits of Adult Learner
+      p.text-intro In the 1970s, Malcolm S. Knowles developed a model to explain the characteristics of learning in adults based in the following assumptions:
+      h4.accent-block The need to learn
+      p Adults need to know why they need to learn something before undertaking to learn it. They need to know how learning will be conducted, what learning will occur and why learning is important. The pedagogical implications of this assumption are that:
+
+      ol
+        li.item-list It is important to know and understand the learner's expectations and needs through needs assessments (an evaluation of what the learner needs to know about the subject matter, performed prior to the teaching intervention by asking teachers and/or students). These allow for appropriate planning, in order to avoid the mistake of teaching content so basic that students already know it (the lecture is viewed as a waste of time) or so difficult that they find it impossible to understand (they lack the knowledge base to understand the content) or they find it irrelevant to their needs.
+        li.item-list It is fundamental to introduce goals and objectives at the beginning of the lecture - what learners will be able to know or do with the knowledge acquired during the lecture.
+        li.item-list It is good practice to present an outline at the beginning of the lecture to give the learners a preview of what they will learn.
+
+      h4.accent-block The learner's self-concept
+      div Adults have the self-concept of being responsible of their own decisions and their own lives and consequently need to be considered by others as capable of self-direction. Teachers should help their adult students become self-directed learners: Learners that are able to control, motivate, supervise and adjust their own learning. Encouraging active learning (where students actively participate in their learning - through debates, questioning, case resolution) over passive learning (where students just sit back and expect to be 'fed' by the teacher) is one strategy for helping students make a transition from dependent to self-directed learners.
+
+      h4.accent-block The role of learner's experiences
+      div Adults come to learning situations with accumulated experience; therefore, in any group of adults there is a wide range of individual differences regarding background, learning styles, motivation, needs, interests and goals. Also, adults tend to develop mental habits, biases and assumptions that usually make them resistant to new ideas and alternative methods of learning.
+      p.note This concept suggests the inclusion of techniques that take into consideration the learner's' experience. Group discussions, debates, case-based methods, etc., are examples of techniques in which students may evaluate, reflect and review their own experience in light of what is being taught. Additionally, constructivist learning theories suggest that new information must connect to previous knowledge in order to be understood, retained and then utilized.
+
+      h4.accent-block Readiness to learn
+      div Adults are ready to learn what they need to know to cope with the situations they face in their real lives. This principle supports the relationship between the content to be taught and the learner's developmental stage. For example, a lecture about phacoemulsification with premium intraocular lenses might not be relevant for first-year residents, although it would be useful for third-year residents.
+
+      h4.accent-block Orientation to learning
+      div Adults will be motivated to learn as long as they perceive the learning as useful to help them perform tasks or solve problems they face in their lives. They will learn more effectively when new knowledge, skills, attitudes and values are presented in the context of their application to real life situations.
+      p.note This concept implies that the content of lectures should be relevant to what learners need to cope with in their daily practice. The instructor's experience on the subject matter (presented through personal stories or cases) adds to the relevance that the audience may find in the content.
+
+    .article-content__chapter.chapter#02
+      h2.article-content__title Modern Adult Learner
+      p.text-post The infographic below from Bersin by Deloitte has a number of interesting and relevant findings about modern version of an Adult Learner. The information is gathered from all types of adult workers. Let us take a look at the data to see how it should impact the way we learn and educate. Do you recognize yourself or your audience in it?
+
+      figure.image-block.image-block--center.image-block--full
+        img.article__image(src="img/modern-learner.jpg", alt="Modern Adult Learner statistics", width="1024", height="624")
+        figcaption.text-source Source of image: https://blog.tcea.org/adult-learners/
+
+    .article-content__chapter.chapter#03
+      h2.article-content__title Life Span Development of Adult Learner
+      div.text-intro #[span.accent Lifelong learning] is knowledge-intensive and fluid. The clear divide between education followed by work is not as clear as it once was. As such, considerable theory and research has focused on life span development. Vygotsky called the difference between an individual's current level of ability and accomplishment and the individual's potential level the zone of proximal development. Learning stimulates awareness of potential and of the gap between current knowledge and skills and one's potential level. This awareness stimulates more mature, internal development processes. People become aware that they need to learn and they also become more aware of how they learn. As this occurs, they are likely to try more complex ways of learning that require deeper thinking and learning.
+      p According to Kegan's model of life span development, a person moves to increasingly complex "orders of mind," deeper levels of self-understanding and awareness of how others see the world-qualitatively different levels of social construction:
+
+      .image-wrap.image-wrap--stages
+        .block-stages
+          span.block-stages-item.block-stage1 Stage 1: Cognitive processes of a young child.
+          span.block-stages-item.block-stage2 Stage 2: Older children, teens, and some adults whose feelings are inseparable from those of others.
+          span.block-stages-item.block-stage3 Stage 3: ("Traditionalism") Teens and many adults who distinguish between their own and others' viewpoints but feel responsible for others' feelings. As such, they are terrific team players. More than 50% of all adults do not proceed beyond this third stage.
+          span.block-stages-item.block-stage4 Stage 4: ("Modernism") People who have a sense of self that is separate from a connection to others. They are autonomous and self-driven, self-governing and principled, but they do not quite understand the limits of self-governing systems.
+          span.block-stages-item.block-stage5 Stage 5: ("Postmodern") People who come to recognize the limits of their own system of principles - a stage of cognitive development that happens before midlife, if it is reached at all.
+
+      .block-stages-age
+        p Other stage models focus on ages and related life and career transitions. Hall's career growth curve distinguishes between:
+
+        ul.block-stages-age-list.list.list--right-buttons
+          li.list-item exploration and trial (between ages 15 and 30)
+          li.list-item establishment and advancement (ages 30-45)
+          li.list-item continued growth, maintenance, or decline and disengagement (after age 45)
+
+        p Levinson's career growth curve distinguished between:
+        .list--wrap
+
+          ul.block-stages-age-list.list.list--left-buttons
+            li.list-item preadulthood (birth to about age 22), the formative period of defining and developing relationships and gaining a sense of self;
+            li.list-item early adulthood (ages 17-45), when the individual defines and develops relationships and gains a sense of independence, the biologically peak years that may include the emergence of satisfaction from career advancement, creativitiy, and achievement of major goals or may be marked by disappointment and stress with overwhelming financial obligations, marriage problems, and parenting troubles;
+            li.list-item possible midlife transition (ages 40-45), with a new sense of individuation and contentment;
+            li.list-item middle adulthood (ages 40-65), with diminished biological capacity but potential for personally and socially satisfying life and mentoring others;
+            li.list-item late adult transition (60-65 and beyond) with the potential for continued generative and reflective development, but for many, a time of physical or mental decline.
+
+    .text-post Do you recognize your life span stage and goals at the moment? How could it possibly change your approach to learning? How could it improve your learning style and patterns?
