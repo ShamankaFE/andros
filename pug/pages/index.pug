@@ -1,4 +1,4 @@
-extends layout/home-layout
+extends ../layout/home-layout
 
 block variables
   - var pageClass = 'index-page'
@@ -21,11 +21,11 @@ block main
 
     .wrapper
       block read
-        include modules/read-block.pug
+        include ../modules/read-block.pug
 
       block test
         section.test-block.section._wrap#test
-          include modules/test-block.pug
+          include ../modules/test-block.pug
           append test
             .test__content
               .test-block__title.section__title
@@ -35,12 +35,12 @@ block main
 
       block inspire
         section.inspire-block.section#quotes
-          include modules/inspire-block.pug
+          include ../modules/inspire-block.pug
 
       block gallery
         section.gallery-block.section._wrap#mindmaps
-          include modules/gallery-block.pug
+          include ../modules/gallery-block.pug
 
       block search
         section.search-block.section
-          include modules/search-block.pug
+          include ../modules/search-block.pug

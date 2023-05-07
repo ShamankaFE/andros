@@ -1,7 +1,7 @@
-extends layout/page-layout
+extends ../layout/page-layout
 
 block variables
-  include ../pug/data/articles-data
+  include ../data/articles-data
   - var article = articles[0]
 
 block content
@@ -18,7 +18,7 @@ block content
         figcaption.text-source Source of image: https://elearningindustry.com/the-adult-learning-theory-andragogy-of-malcolm-knowles
       p The notion of #[span.accent andragogy] has been around for nearly two centuries. It became particularly popular in North America and Britain as a way of describing adult learning through the work of Malcolm Knowles. When adult education first became popular in the early 1900s, it was assumed that the same methods and techniques used to teach children could also be applied to adults. In fact, pedagogy has come to mean the art and science of teaching, even though its Greek root words actually mean leading children.
 
-      include modules/timeline
+      include ../modules/timeline
 
     .article-content__chapter.chapter#02
       h2.article-content__title Learning theories
