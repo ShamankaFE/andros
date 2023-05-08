@@ -1,17 +1,35 @@
-    function searchByTagName() {
-      var input, filter, ul, li, a, i, txtValue;
-      input = document.querySelector('#myInput');
-      filter = input.value.toUpperCase();
-      ul = document.querySelector(".myUL");
-      li = ul.querySelectorAll('.tag');
+const tagInput = document.querySelector('#tagInput');
+const clearButton = document.querySelector('.search-block__clear');
+const tagList = document.querySelector('#tagList');
+const tags = tagList.querySelectorAll('.tag');
 
-      for (i = 0; i < li.length; i++) {
-        a = li[i].querySelectorAll(".tag-link")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          li[i].style.display = "";
-        } else {
-          li[i].style.display = "none";
-        }
-      }
+const clearInput = () => {
+  tagInput.value = '';
+  for (let i = 0; i < tags.length; i++) {
+    tags[i].style.display = "inline";
+  }
+  clearButton.classList.remove('hover-effect');
+};
+
+const searchByTagName = () => {
+  clearButton.classList.add('hover-effect');
+  const formattedInput = tagInput.value.toLowerCase();
+  for (let i = 0; i < tags.length; i++) {
+    const tagLink = tags[i].querySelector('.tag-link');
+    const tagValue = tagLink.textContent;
+    if (tagValue.toLowerCase().indexOf(formattedInput) > -1) {
+      tags[i].style.display = "inline";
+    } else {
+      tags[i].style.display = "none";
     }
+    if (tagInput.value) {
+      clearButton.addEventListener('click', clearInput);
+    } else {
+      clearButton.removeEventListener('click', clearInput);
+    }
+  }
+};
+
+if (tagInput) {
+  tagInput.addEventListener('keyup', searchByTagName);
+}

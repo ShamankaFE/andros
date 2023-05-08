@@ -6,18 +6,14 @@ include ../data/tags-data
     h2.title Become learning-friendly with these concepts
 
   .search-block__input
-    input#myInput(
+    input#tagInput(
       type="text"
-      onkeyup="searchByTagName()"
       placeholder="Search for terms.."
     )
+    span.search-block__clear X
 
-  ul.search-cloud.tags.myUL
+  ul.search-cloud.tags#tagList
     each tag in tags
       li.search-cloud__tag.tag
-        a.tag-link(href=`${tag.link}`) #{tag.name}
-
-
-    //- li.search-cloud__tag.tag
-    //-   a.tag-link(href="andragogy.html#01") Androgogy
+        a.tag-link(href=`${tag.link}`)= tag.name
 

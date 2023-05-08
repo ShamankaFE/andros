@@ -1,69 +1,87 @@
 .search-block {
-	height: 360px;
+  height: 360px;
 }
 
 .search-block__content {
-	position: absolute;
-	height: max-content;
-	max-height: 390px;
-	overflow: clip;
-	margin-left: auto;
-	margin-right: auto;
-	left: 0;
-	right: 0;
-	margin-bottom: -240px;
-	padding: 30px;
-	background-color: rgb(237, 236, 236);
-	box-shadow: $shadGrey;
+  position: absolute;
+  height: max-content;
+  max-height: 400px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  margin-bottom: -240px;
+  padding: 30px;
+  background-color: rgb(237, 236, 236);
+  box-shadow: $shadGrey;
 }
 
 .search-cloud {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	padding: 0 30px 30px 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 30px 30px 30px;
 }
 
 .tag {
-	padding: 4px 16px;
-	&::first-letter {
-		color: $red !important;
-	}
+  display: inline;
+  padding: 4px 16px;
+  &::first-letter {
+    color: $red !important;
+  }
 }
 
 .tag-link {
-	color: rgb(99, 99, 99);
-	font-size: 1rem;
-	&:hover,
-	&:active,
-	&:focus {
-		color: $black;
-		cursor: pointer;
-	}
+  color: rgb(99, 99, 99);
+  font-size: 1rem;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $black;
+    cursor: pointer;
+  }
 }
 
 .search-block__input {
-	position: relative;
-	max-width: 30%;
-	margin: 0 auto;
-	&::after {
-		content: "\f002";
-		position: absolute;
-		top: 8px;
-		right: 16px;
-		text-rendering: auto;
-		-webkit-font-smoothing: antialiased;
-		font-family: "Font Awesome Solid";
-		font-weight: 900;
-	}
+  position: relative;
+  max-width: 30%;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  &::before {
+    content: "\f002";
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome Solid";
+    font-weight: 900;
+  }
 }
 
-#myInput {
-	width: 100%;
-	margin-bottom: 16px;
-	padding: 12px 20px 12px 40px;
-	font-size: 16px;
-	text-align: center;
-	border-radius: 10px;
-	border: 2px solid black;
+#tagInput {
+  display: inline;
+  padding: 12px 40px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.search-block__clear {
+  display: inline-block;
+  width: 40px;
+  font-weight: 900;
+  font-size: 18px;
+  color: grey;
+  padding: 12px;
+  position: relative;
+  top: 0px;
+  left: -40px;
+  text-align: center;
+  &.hover-effect {
+    color: $red;
+    cursor: pointer;
+  }
 }
