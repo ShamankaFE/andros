@@ -12,7 +12,7 @@
   <header class="page-header">
     <div class="page-header--top _wrap">
       <div class="page-header__logo">
-        <h1><a class="site-logo index.html">Andros <span class="accent">.</span></a></h1>
+        <h1><a class="site-logo" href="index.html">Andros<span class="accent">.</span></a></h1>
       </div>
       <div class="page-header__nav">
         <input class="site-nav__toggle" type="checkbox" id="menu">
@@ -229,9 +229,9 @@
             <h2 class="title">Become learning-friendly with these concepts</h2>
           </div>
           <div class="search-block__input">
-            <input id="myInput" type="text" onkeyup="searchByTagName()" placeholder="Search for terms..">
+            <input id="tagInput" type="text" placeholder="Search for terms.."><span class="search-block__clear">X</span>
           </div>
-          <ul class="search-cloud tags myUL">
+          <ul class="search-cloud tags" id="tagList">
             <li class="search-cloud__tag tag"><a class="tag-link" href="andragogy.html#01">Androgogy</a></li>
             <li class="search-cloud__tag tag"><a class="tag-link" href="andragogy.html#02">Knowles</a></li>
             <li class="search-cloud__tag tag"><a class="tag-link" href="andragogy.html#02">Learning principles</a></li>
@@ -299,5 +299,5 @@
       </div>
     </div>
   </footer>
-  <script src="/js/main.js"></script>
+  <script src="js/main.js" type="module"></script>
 </html>
