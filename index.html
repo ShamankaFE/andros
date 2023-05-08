@@ -197,9 +197,9 @@
             <h2 class="title">Become learning-friendly with these concepts</h2>
           </div>
           <div class="search-block__input">
-            <input id="myInput" type="text" onkeyup="searchByTagName()" placeholder="Search for terms..">
+            <input id="tagInput" type="text" placeholder="Search for terms.."><span class="search-block__clear">X</span>
           </div>
-          <ul class="search-cloud tags myUL">
+          <ul class="search-cloud tags" id="tagList">
             <li class="search-cloud__tag tag"><a class="tag-link" href="andragogy.html#01">Androgogy</a></li>
             <li class="search-cloud__tag tag"><a class="tag-link" href="andragogy.html#02">Knowles</a></li>
             <li class="search-cloud__tag tag"><a class="tag-link" href="andragogy.html#02">Learning principles</a></li>
@@ -223,6 +223,18 @@
           </ul>
         </div>
       </section>
+    </div>
+    <div class="modal" id="modal-youtube" aria-hidden="true"><a class="modal__area" href="#test"></a>
+      <div class="modal__wrapper">
+        <div class="modal__content"><a class="modal__close" href="#test">Close</a>
+          <h5 class="modal__title">What you need to learn about Learning Styles</h5>
+          <div class="modal__text">Watch this short video below to get a clue...</div>
+          <div class="modal__video">
+            <iframe width="560px" height="315px" src="https://www.youtube.com/embed/cN-T9lnjgrE" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="button-box"><a class="button button--test" href="questionaire.html">Test yourself now</a></div>
+        </div>
+      </div>
     </div>
   </main>
   <footer class="footer">
@@ -267,5 +279,5 @@
       </div>
     </div>
   </footer>
-  <script src="/js/main.js"></script>
+  <script src="js/main.js" type="module"></script>
 </html>

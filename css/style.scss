@@ -43,12 +43,12 @@
     url("../fonts/fa-regular-400.ttf") format("truetype");
 }
 
-$red: #bd1220;
-$black: #000;
-$white: #fff;
+$red: rgba(189, 18, 32, 1);
+$black: rgba(0, 0, 0, 1);
+$white: rgba(255, 255, 255, 1);
 
-$shadGrey: 0 3px 10px 0 rgb(0 0 0 / 50%);
-$shadLightGrey: 0 3px 10px 0 rgb(0 0 0 / 30%);
+$shadGrey: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
+$shadLightGrey: 0 3px 10px 0 rgba(0, 0, 0, 0.3);
 
 @mixin imageHeader($url, $position: center) {
   background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), $url;
@@ -171,7 +171,7 @@ button,
 dd,
 dt {
   &::selection {
-    color: white !important;
+    color: $white !important;
     background-color: $black !important;
   }
 }
@@ -184,8 +184,8 @@ body {
 }
 
 .page-body {
-  color: gray;
-  background-color: white;
+  color: rgba(128, 128, 128, 1);
+  background-color: $white;
   line-height: 170%;
 }
 
@@ -302,8 +302,7 @@ body {
 }
 
 .accent {
-  color: #bd1220;
-
+  color: rgba(191, 18, 32, 1);
   &--bold {
     font-weight: 500;
   }
@@ -374,7 +373,7 @@ body {
     margin-right: 16px;
   }
   background-color: $white;
-  color: gray;
+  color: rgba(128, 128, 128, 1);
   border: 2px solid gray;
   border-radius: 30px;
   font-weight: 500;
@@ -382,8 +381,8 @@ body {
   &:hover,
   &:active,
   &:focus {
-    background-color: gray;
-    color: white;
+    background-color: rgba(128, 128, 128, 1);
+    color: $white;
     box-shadow: $shadGrey;
   }
 
@@ -395,7 +394,7 @@ body {
     &:active,
     &:focus {
       background-color: $red;
-      color: white;
+      color: $white;
       box-shadow: $shadGrey;
     }
   }
@@ -456,7 +455,7 @@ body {
 
 .quote-block__slogan {
   margin-bottom: 24px;
-  color: gray;
+  color: rgba(128, 128, 128, 1);
   font-weight: 300;
 }
 
@@ -577,13 +576,13 @@ body {
   margin-right: 60px;
   padding: 48px 60px 48px;
   background-color: $black;
-  color: white;
+  color: $white;
   border-bottom-right-radius: 30%;
   box-shadow: $shadGrey;
 }
 
 .contents__title {
-  color: white;
+  color: $white;
   text-transform: uppercase;
   margin-top: 0;
 }
@@ -606,7 +605,7 @@ body {
   }
 
   &--link {
-    color: gray;
+    color: rgba(128, 128, 128, 1);
 
     &:hover,
     &:active,
@@ -630,7 +629,7 @@ body {
   &:hover,
   &:active,
   &:focus {
-    color: white;
+    color: $white;
     font-weight: 500;
     transition: all 0.7s;
   }
@@ -680,7 +679,7 @@ body {
   margin-top: 24px;
   margin-bottom: 80px;
   background-color: $red;
-  color: white;
+  color: $white;
   font-size: 0.8rem;
   font-weight: 300;
   min-height: 80px;
@@ -750,7 +749,7 @@ body {
 .block-stages {
   display: block;
   width: auto;
-  color: #f5f5f5;
+  color: rgba(245, 245, 245, 1);
   padding: 10px;
 }
 
@@ -779,26 +778,26 @@ body {
 }
 
 .block-stage1 {
-  background-color: rgb(189, 18, 32, 0.3);
+  background-color: rgba(189, 18, 32, 0.3);
 }
 
 .block-stage2 {
-  background-color: rgb(189, 18, 32, 0.4);
+  background-color: rgba(189, 18, 32, 0.4);
   margin-left: 10%;
 }
 
 .block-stage3 {
-  background-color: rgb(189, 18, 32, 0.6);
+  background-color: rgba(189, 18, 32, 0.6);
   margin-left: 20%;
 }
 
 .block-stage4 {
-  background-color: rgb(189, 18, 32, 0.8);
+  background-color: rgba(189, 18, 32, 0.8);
   margin-left: 30%;
 }
 
 .block-stage5 {
-  background-color: rgb(189, 18, 32, 1);
+  background-color: rgba(189, 18, 32, 1);
   margin-left: 40%;
 }
 
@@ -842,7 +841,7 @@ body {
     height: 15px;
     margin: 0px -10px 0px 10px;
     border-radius: 50%;
-    background-color: #bd1220;
+    background-color: rgba(189, 18, 32, 1);
     box-shadow: $shadGrey;
     vertical-align: center;
     overflow: visible;
@@ -874,7 +873,7 @@ body {
     margin: 0px 10px 0px 0px;
   }
   &:hover::before {
-    background: #bd1220;
+    background: rgba(189, 18, 32, 1);
   }
 }
 
@@ -915,7 +914,7 @@ body {
   margin-left: 60px;
   &::before {
     content: "";
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 1);
   }
 }
 
@@ -992,7 +991,7 @@ body {
   left: 0;
   width: 100%;
   padding: 24px;
-  color: white;
+  color: $white;
   background-color: $red;
   font-size: 3rem;
   text-align: center;
@@ -1015,13 +1014,10 @@ body {
   text-align: left;
 }
 
-.test-card__items {
-}
-
 .test-card__item {
   margin-bottom: 8px;
   margin-right: 8px;
-  color: lightgrey;
+  color: rgba(211, 211, 211, 1);
   font-size: 1rem;
   &:hover {
     color: $white;
@@ -1168,7 +1164,7 @@ body {
   }
 }
 .tip__content {
-  color: lightgray;
+  color: rgba(212, 212, 212, 1);
   font-size: 0.9rem;
   line-height: 1.5;
 }
