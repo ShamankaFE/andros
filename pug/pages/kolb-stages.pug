@@ -125,18 +125,18 @@ block content
       h2.article-content__title Kolb's successors and their developments
       p.text-intro After Kolb has introduced his learning theory, it was popularized and developed further. As a result there have been appeared several interesting learning models which a re useful to take into consideration. Switch between tabs below and discover more about yourself and your audience.
 
-      .kolb-other-block
+      .kolb-other-block#tabModule
         .tab-block
-          button.tab-block__link(onclick="openTab(event, 'M01')" id="defaultOpen") Model #01
-          button.tab-block__link(onclick="openTab(event, 'M02')") Model #02
-          button.tab-block__link(onclick="openTab(event, 'M03')") Model #03
+          button.tab-block__link.tab-block__link--active#M01 Model #01
+          button.tab-block__link#M02 Model #02
+          button.tab-block__link#M03 Model #03
 
-        .tab-content#M01
+        .tab-content.tab-content--active#M01-tab
           h3.tab-content__title 4MAT Learning Model
           p The 4MAT learning model is an extension of the Kolb model. However, it presents 4 different learning styles which include imaginative, analytical, dynamic, and common sense.
           p This model suggests that individuals who base their learning on experiences are learners who fall in the category of common sense. Imaginative learners conceptualize these experiences, whereas analytical learners apply and refine the ideas too. Dynamic learners make use of all the steps but mainly base their learning on their personal interpretation.
 
-        .tab-content#M02
+        .tab-content#M02-tab
           h3.tab-content__title Honey Mumford Model
           p The Honey Mumford model is pretty similar to the Kolb model. It introduces the following learning styles:
           ul.list
@@ -145,7 +145,7 @@ block content
             li.item-list #[span.accent Pragmatists:] Such individuals conceptualize and experiment with ideas before they learn from them.
             li.item-list #[span.accent Reflectors:] These learners reflect on what they see and learn from it.
 
-        .tab-content#M03
+        .tab-content#M03-tab
           h3.tab-content__title Felder-Silverman Learning Style Model
           p This learning model is focused on the fact that every individual has their own preference when it comes to the process of grasping new information. Certain individuals may have multiple preferences, some may shift from one to the other, and some have only one.
           ul.list

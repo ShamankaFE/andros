@@ -15,5 +15,5 @@ include ../data/tags-data
   ul.search-cloud.tags#tagList
     each tag in tags
       li.search-cloud__tag.tag
-        a.tag-link(href=`${tag.link}`)= tag.name
+        a.tag-link(href=`${tag.link}`) #{tag.name}
 

@@ -72,6 +72,10 @@
     font-family: "Font Awesome Solid";
     font-weight: 400;
   }
+}
+
+.accordion {
+  transition: 0.8s;
   &:hover,
   &:active,
   &:focus,
@@ -85,6 +89,11 @@
   }
 }
 
-.accordion {
-  transition: 0.8s;
+.panel {
+  display: none;
+  &--active {
+    display: block;
+    transform: translateY(0%);
+    transition: transform 2.8s ease-out;
+  }
 }

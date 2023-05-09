@@ -2,10 +2,14 @@
   .more-block__title.section__title
     p.subtitle Continue to read
     h2.title Other articles
-  ul
+  ul#article-list
+    //- li
+    //-   a.item-list.item-list--link(href="adult-learner.html") Who is Adult Learner
+    //- li
+    //-   a.item-list.item-list--link(href="learn-models.html") Learning models
+    //- li
+    //-   a.item-list.item-list--link(href="kolb-stages.html") Kolb and his 4 stages
+  template#article-item
     li
-      a.item-list.item-list--link(href="adult-learner.html") Who is Adult Learner
-    li
-      a.item-list.item-list--link(href="learn-models.html") Learning models
-    li
-      a.item-list.item-list--link(href="kolb-stages.html") Kolb and his 4 stages
+      a.item-list.item-list--link(href="#") Text
+
