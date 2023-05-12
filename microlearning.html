@@ -42,13 +42,10 @@
     <div class="wrapper">
       <section class="contents" id="contents">
         <h4 class="contents__title">Contents</h4>
-        <ul class="contents__list">
-          <li><a class="contents__link item-list" href="#01">Roots of Andragogy</a></li>
-          <li><a class="contents__link item-list" href="#02">Learning theories</a></li>
-          <li><a class="contents__link item-list" href="#03">Adult Learning principles</a></li>
-          <li><a class="contents__link item-list" href="#04">Differences from Pedagogy</a></li>
-          <li><a class="contents__link item-list" href="#05">References</a></li>
-        </ul>
+        <ul class="contents__list"></ul>
+        <template id="article-menu">
+          <li><a class="contents__link item-list" href="#">Text</a></li>
+        </template>
       </section>
       <section class="article-content section _wrap">
         <p class="text-intro text-intro--main">Microlearning is a way of teaching and training in ways that take little time but ultimately reach the intended goal. This new approach to learning, which has been tailored to the demands and habits of today's people, has proven to be more engaging, efficient, and cost-effective. But what exactly is microlearning? Ready to find out what it takes? Let's dive right in!</p>
@@ -107,7 +104,7 @@
         <div class="article-content__chapter chapter" id="03">
           <h2 class="article-content__title">Best practices of microlearning (TOP-10)</h2>
           <p class="text-intro">The benefits of microlearning make it an attractive option. If you're thinking of converting your training programs to microlearning courses, you need the right strategy. Review these guidelines and first steps for creating online courses that engage your audience and enhance learning (borrowed from a portal <a class="accent" href="https://elearningindustry.com/from-learning-to-microlearning-how-to-redesign-your-training" target="_blank">elearningindustry.com</a>).</p>
-          <div class="practice-block">
+          <div class="practice-block" id="collapsed">
             <button class="collapsible">1. Keep It Short And To The Point</button>
             <div class="collapsible__content">
               <p>According to Josh Bersin, today's employees are stressed, impatient, and distracted. This implies that, depending on whether the training seems relevant and will fit into their busy schedules, your learners will decide whether or not to continue with it in 5-10 seconds. In our opinion, a microlearning lesson should last 3-5 minutes.</p>
@@ -273,11 +270,10 @@
             <p class="subtitle">Continue to read</p>
             <h2 class="title">Other articles</h2>
           </div>
-          <ul>
-            <li><a class="item-list item-list--link" href="adult-learner.html">Who is Adult Learner</a></li>
-            <li><a class="item-list item-list--link" href="learn-models.html">Learning models</a></li>
-            <li><a class="item-list item-list--link" href="kolb-stages.html">Kolb and his 4 stages</a></li>
-          </ul>
+          <ul id="article-list"></ul>
+          <template id="article-item">
+            <li><a class="item-list item-list--link" href="#">Text</a></li>
+          </template>
         </div>
       </section>
       <section class="search-block section">
