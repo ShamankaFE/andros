@@ -1,18 +1,16 @@
-import { getRandomArrayElement } from "./util.js";
+import { getRandomInteger } from "./util.js";
 import { ARTICLES } from "./article-data.js";
 
-const currentTitle = document.title;
-console.log(ARTICLES);
 const list = document.querySelector('#article-list');
 const template = document.querySelector('#article-item').content;
-// const items = document.querySelectorAll('.item-list--link');
+const currentTitle = document.title;
 
 const renderMore = () => {
   if (!list) {
     return;
   }
 
-const renderItemClone = ({ link, listedTitle }) => {
+  const renderItemClone = ({ link, listedTitle }) => {
     const itemClone = template.cloneNode(true);
 
     const itemLink = itemClone.querySelector('.item-list--link');
@@ -23,18 +21,22 @@ const renderItemClone = ({ link, listedTitle }) => {
   };
 
   const fragment = document.createDocumentFragment();
+  const idArray = [];
 
   for (let i = 0; i < 3; i++) {
-    const newItem = getRandomArrayElement(ARTICLES);
-    const itemClone = renderItemClone(newItem);
-    if (newItem.title === currentTitle) {
+    const newItemID = getRandomInteger(0, ARTICLES.length - 1);
+    const newItem = ARTICLES[newItemID];
+
+    if (idArray.includes(newItemID)) {
       i -= 1;
-    // } else if (fragment.indexOf(itemClone) >= 0) {
-    // } else if (fragment.find(el => el === newItem)) {
-      // i -= 1;
-    } else
+    } else if (newItem.title === currentTitle) {
+      i -= 1;
+    } else {
+      idArray.push(newItemID);
+      const itemClone = renderItemClone(newItem);
       fragment.append(itemClone);
     }
+  }
 
   list.append(fragment);
 };
