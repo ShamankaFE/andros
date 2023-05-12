@@ -2,13 +2,14 @@ import { getRandomInteger } from "./util.js";
 import { ARTICLES } from "./article-data.js";
 
 const list = document.querySelector('#article-list');
-const template = document.querySelector('#article-item').content;
-const currentTitle = document.title;
 
 const renderMore = () => {
   if (!list) {
     return;
   }
+
+  const template = document.querySelector('#article-item').content;
+  const currentTitle = document.title;
 
   const renderItemClone = ({ link, listedTitle }) => {
     const itemClone = template.cloneNode(true);

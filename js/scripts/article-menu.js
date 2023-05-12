@@ -1,13 +1,13 @@
 const articleMenu = document.querySelector('#contents');
-const list = articleMenu.querySelector('.contents__list');
-const template = document.querySelector('#article-menu').content;
-const chapters = document.querySelectorAll('.chapter');
-console.log(chapters);
 
 const renderArticleMenu = () => {
   if (!articleMenu) {
     return;
   }
+
+  const list = articleMenu.querySelector('.contents__list');
+  const template = document.querySelector('#article-menu').content;
+  const chapters = document.querySelectorAll('.chapter');
 
   const renderItemClone = (el) => {
     const itemClone = template.cloneNode(true);
