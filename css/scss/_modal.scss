@@ -22,6 +22,14 @@
     transform: translate(0px, 0px);
     opacity: 1;
   }
+
+  &:target .page-body {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    overflow-y: hidden;
+    padding-right: 15px;
+  }
 }
 
 .modal__wrapper {

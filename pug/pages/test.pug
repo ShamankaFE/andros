@@ -1,0 +1,155 @@
+extends ../layout/page
+
+mixin card(type, suffix, title, mod)
+  .style-block(class= mod ? 'style-block--reversed' : '')
+    .style__image
+      img.image-cover(
+        src=`img/galleries/styles/style_${type}.jpg`
+        alt=`learning style, ${type}`
+        width="960"
+        height="670")
+    .style__desc
+      h5.style__title(id=`style_${suffix}`) !{title}
+      ul.style__list.list
+        block
+
+block variables
+  - var pageClass = 'test-page'
+  - var title = 'Learn your learning style - Adult Learning and Adult Learners'
+  - var subTitle = 'Test yourself'
+  - var fullTitle = 'Learn your learning style'
+  - var keyword = 'learning styles test'
+  - var suffix = 'test'
+
+block content
+  section.article-content.section._wrap
+    p.text-intro.text-intro--main.
+      Kolb's Learning Style Questionnaire is designed to find out your preferred learning styles(s) as an adult. Over the years, you have probably developed learning habits that help you benefit more from some experiences than from others. You may be unaware of this, and this questionnaire will help you pinpoint your learning preferences and share them with the others.
+
+    .article-content__chapter.chapter#01
+      h2.article-content__title Ready?
+      p.text-intro This questionnaire will probably take you about 10 minutes to complete. Before diving into the test - you can read overview of the Kolb's Learning Model #[a.accent(href="kolb-stages.html") here] or get inspired by this short video below...
+
+      figure.image-block.image-block--full.image-block--video
+        iframe.video.video--centered(
+          src="https://www.youtube.com/embed/cN-T9lnjgrE"
+          width="560"
+          height="315"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        )
+        figcaption.text-source More videos you can find on YouTube
+
+    .article-content__chapter.chapter#02
+      h2.article-content__title Steady... Go... (instructions)
+      p.text-intro.
+        The accuracy of your results depends on how honest you are. There are no right or wrong answers. If you agree more than you disagree with a statement, place a tick in the box to the left of the question. If you disagree more than you agree, leave the box blank. If you find yourself wondering which situation to think of when answering a question, just think about how you are when you are working with people. Go with your first gut reaction instead of over-thinking your response.
+      .note If you find yourself wondering which situation to think of when answering a question, just think about how you are when you are working with people. Go with your first gut reaction instead of over-thinking your response.
+
+      .form-container
+        form.test-form#test(method="post" enctype="multipart/form-data" action="#")
+          .question-block
+            template#test-question
+              .checkbox
+                input.checkbox__input(type="checkbox" value="v1" id="1")
+                label.checkbox__label(for="") Text
+          .button__box--test
+            button.button.button--test.button--submit(type="submit") Check your results
+            button.button.button--test.button--reset(type="reset") Reset all
+
+    .article-content__chapter.chapter#03
+      h2.article-content__title Your preferred learning styles (results)
+      table#table-scores
+        thead
+          th.table__cell--header Style
+          th.table__cell--header Score
+          th.table__cell--header Level
+        tr.table__row
+          td.type.table__cell
+            a.style-link(href='#style_act') ACTIVIST
+          td.score.table__cell#score-act To see the result fill in questionnaire
+          td.level.table__cell
+            span#level-act ...
+        tr.table__row
+          td.type.table__cell
+            a.style-link(href='#style_ref') REFLECTOR
+          td.score.table__cell#score-ref To see the result fill in questionnaire
+          td.level.table__cell
+            span#level-ref ...
+        tr.table__row
+          td.type.table__cell
+            a.style-link(href='#style_the') THEORIST
+          td.score.table__cell#score-the To see the result fill in questionnaire
+          td.level.table__cell
+            span#level-the ...
+        tr.table__row
+          td.type.table__cell
+            a.style-link(href='#style_pra') PRAGMATIST
+          td.score.table__cell#score-pra To see the result fill in questionnaire
+          td.level.table__cell
+            span#level-pra ...
+
+    .article-content__chapter.chapter#04
+      h2.article-content__title Style Guide (interpretation)
+      p Now after you got your total scores for each learning style on the table above to determine the strength of your preference - check out full learning profiles and compare them with your learning reality. Leave open space for experiments and improve your efficacy in adult learning.
+
+      .style-catalog#styles
+        +card(
+          'activist',
+          'act',
+          '<span class="accent">ACTIVISTS</span> want practical tasks and very little theory. They learn best from activities where:',
+          false
+        )
+          li.item-list New experiences are emphasised;
+          li.item-list The focus is on the present and on doing such activities as games, problem solving, simulations;
+          li.item-list There is a lot of action and excitement;
+          li.item-list They can lead and be in the limelight;
+          li.item-list Ideas are generated without any concern about practical constraints;
+          li.item-list They have to respond to a challenge and take risks;
+          li.item-list The central focus is on team problem-solving.
+
+        +card(
+          'theorist',
+          'the',
+          '<span class="accent">THEORISTS</span> want handouts, something to take away and study. They learn best from activities where:',
+          true
+        )
+          li.item-list The learning forms a part of a conceptual whole, such as a model for a theory;
+          li.item-list There is time to explore the interrelationship amongst elements;
+          li.item-list They can explore the theory and methodology underlying the subject under investigation;
+          li.item-list They are intellectually stretched;
+          li.item-list There is a clear and obvious purpose to the activities;
+          li.item-list There is a reliance on rationality and logic;
+          li.item-list They can analyse situations and then generalise their findings;
+          li.item-list They are asked to understand complex situations.
+
+        +card(
+          'reflector',
+          'ref',
+          '<span class="accent">REFLECTORS</span> want lots of breaks to go off and read and discuss. They learn best from activities where:',
+          false
+        )
+          li.item-list There are opportunities to observe and consider;
+          li.item-list There is a strong element of passive involvement such as listening to a speaker or watching a video;
+          li.item-list There is time to think before having to act or contribute;
+          li.item-list There is opportunity for research and problems can be probed in some depth;
+          li.item-list They can review what was happening;
+          li.item-list They are asked to produce reports that carefully analyse a situation or issue;
+          li.item-list There is interaction with others without any risks of strong feelings coming to the fore;
+          li.item-list They can finalise a view without being put under pressure.
+
+        +card(
+          'pragmatist',
+          'pra',
+          '<span class="accent">PRAGMATISTS</span> want shortcuts and tips. They learn best from activities where:',
+          true
+        )
+          li.item-list There is a clear link back to some job-related problem;
+          li.item-list Material is directed towards techniques that make their work easier;
+          li.item-list They are able to practice what they have learned;
+          li.item-list They can relate to a successful role model;
+          li.item-list There are many opportunities to implement what has been learned;
+          li.item-list The relevance is obvious and the learning is easily transferred to their jobs;
+          li.item-list What is done is practical such as drawing up action plans or trialing techniques or procedures.

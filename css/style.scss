@@ -387,21 +387,33 @@ body {
   }
 
   &--test {
-    color: $red;
-    border: 2px solid $red;
-
+    font-weight: 700;
     &:hover,
     &:active,
     &:focus {
-      background-color: $red;
       color: $white;
       box-shadow: $shadGrey;
     }
   }
 
   &--submit {
-    display: block;
-    margin: 0 auto;
+    border: 2px solid $red;
+    color: $red;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $red;
+    }
+  }
+
+  &--reset {
+    border: grey;
+    color: grey;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: grey;
+    }
   }
 }
 

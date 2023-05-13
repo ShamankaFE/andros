@@ -585,18 +585,26 @@ body {
           box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
 }
 .button--test {
-  color: rgb(189, 18, 32);
-  border: 2px solid rgb(189, 18, 32);
+  font-weight: 700;
 }
 .button--test:hover, .button--test:active, .button--test:focus {
-  background-color: rgb(189, 18, 32);
   color: rgb(255, 255, 255);
   -webkit-box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
 }
 .button--submit {
-  display: block;
-  margin: 0 auto;
+  border: 2px solid rgb(189, 18, 32);
+  color: rgb(189, 18, 32);
+}
+.button--submit:hover, .button--submit:active, .button--submit:focus {
+  background-color: rgb(189, 18, 32);
+}
+.button--reset {
+  border: grey;
+  color: grey;
+}
+.button--reset:hover, .button--reset:active, .button--reset:focus {
+  background-color: grey;
 }
 
 .inspire-block {
@@ -2303,7 +2311,7 @@ caption {
 
 .form-container {
   width: 100%;
-  height: 450px;
+  height: 90vh;
   overflow: auto;
   padding: 48px;
   background-color: #000;
@@ -2360,6 +2368,69 @@ caption {
   font-size: 1.1rem;
 }
 
+.question-block {
+  margin-bottom: 36px;
+}
+
+.button__box--test {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.style-link {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+.style-link:hover {
+  color: rgb(189, 18, 32);
+}
+
+.score {
+  color: rgb(189, 18, 32);
+  font-weight: bold;
+  text-align: center;
+}
+
+.level {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-align: center;
+}
+
+.very-strong {
+  color: rgb(255, 255, 255);
+  background-color: rgb(189, 18, 32);
+  padding: 4px 16px;
+}
+
+.strong {
+  color: rgb(255, 255, 255);
+  background-color: hsl(355, 83%, 61%);
+  padding: 4px 16px;
+}
+
+.moderate {
+  color: rgb(255, 255, 255);
+  background-color: hsl(355, 83%, 81%);
+  padding: 4px 16px;
+}
+
+.low {
+  color: rgb(255, 255, 255);
+  background-color: grey;
+  padding: 4px 16px;
+}
+
+.very-low {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  padding: 4px 16px;
+}
+
 .modal {
   position: fixed;
   width: 100%;
@@ -2386,6 +2457,13 @@ caption {
       -ms-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
   opacity: 1;
+}
+.modal:target .page-body {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  overflow-y: hidden;
+  padding-right: 15px;
 }
 
 .modal__wrapper {
