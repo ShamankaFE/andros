@@ -1,0 +1,216 @@
+.form {
+}
+
+.fieldset {
+  padding: 10px;
+  border: 2px solid $red;
+  border-radius: 10px;
+  padding: 48px 24px;
+  padding-top: 88px;
+  &:not(:last-of-type) {
+    margin-bottom: 112px;
+  }
+}
+
+.legend {
+  font-size: 1.2rem;
+  color: $red;
+  padding: 8px 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.form-question {
+  display: block;
+  position: relative;
+  margin-bottom: 32px;
+  color: $black;
+}
+
+.label {
+  display: block;
+  color: $black;
+  padding: 8px 0;
+  &--span {
+    display: inline;
+    margin-right: 16px;
+  }
+  &--checkbox,
+  &--radio {
+    cursor: pointer;
+    display: block;
+    padding: 8px;
+    padding-left: 32px;
+    &::before {
+      content: "";
+      display: inline-block;
+      position: relative;
+      top: 0;
+      left: -12px;
+      width: 16px;
+      height: 16px;
+      border: 2px solid grey;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+  &--radio {
+    display: inline;
+    &::before {
+      content: "";
+      border-radius: 50%;
+    }
+  }
+  &--checkbox,
+  &--radio {
+    color: grey;
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+.input-form,
+.select,
+.option,
+.textarea,
+.input-date {
+  padding: 8px 16px;
+  font-size: 1rem;
+  color: grey;
+}
+
+.input-checkbox,
+.input-radio {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  &:focus + .label {
+    border: 1px dotted $red;
+    border-radius: 8px;
+    width: 100%;
+  }
+  &:checked + label::before {
+    background-color: $red;
+    transition: all 0.7s;
+  }
+  &:checked + label {
+    color: $red;
+    font-size: 1.1rem;
+  }
+}
+
+.input-date {
+  border-radius: 8px;
+  background-color: rgba(128, 128, 128, 0.5);
+  color: $white;
+}
+
+.input-form--number {
+  border: 2px solid $red;
+  border-radius: 8px;
+  max-width: 100px;
+  color: $red;
+}
+
+.textarea {
+  width: 100%;
+  border: 1px dotted $red;
+  border-radius: 8px;
+  font-style: italic;
+  resize: vertical;
+  &:hover {
+    border: 2px solid $red;
+  }
+}
+
+.select {
+  min-width: 100%;
+
+  border: 1px dotted $red;
+  border-radius: 8px;
+  &:hover {
+    border: 2px solid $red;
+  }
+}
+
+.optgroup {
+  color: $red;
+}
+
+.option {
+  overflow-wrap: anywhere;
+  &:hover,
+  &:focus,
+  &:active,
+  &:target {
+    background-color: $red;
+    color: $white;
+  }
+  &:checked {
+    background-color: $red;
+    color: $white;
+  }
+}
+
+.range {
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 10rem;
+  margin-right: 16px;
+
+  &::-webkit-slider-runnable-track {
+    background: lightgrey;
+    height: 0.6rem;
+    border-radius: 8px;
+  }
+  &::-moz-range-track {
+    background-color: lightgrey;
+    height: 0.6rem;
+    border-radius: 8px;
+  }
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -4px;
+    background-color: $red;
+    height: 1.1rem;
+    width: 1.1rem;
+    border-radius: 50%;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:focus::-webkit-slider-thumb {
+    border: 1px solid grey;
+    outline: 3px solid grey;
+    outline-offset: 0.125rem;
+  }
+  &:focus::-moz-range-thumb {
+    border: 1px solid grey;
+    outline: 3px solid grey;
+    outline-offset: 0.125rem;
+  }
+}
+
+.output-form {
+  color: $red;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.button__box--form {
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+}
+
+.button--form {
+  font-size: 1rem;
+  &:not(:last-of-type) {
+    margin-right: 32px;
+  }
+}

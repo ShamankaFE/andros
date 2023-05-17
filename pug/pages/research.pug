@@ -1,0 +1,220 @@
+extends ../layout/page
+
+block variables
+  - var pageClass = 'research-page'
+  - var title = 'Research on Adult Education - Adult Learning and Adult Learners'
+  - var subTitle = 'Questionnaire'
+  - var fullTitle = 'Adult Education Survey'
+  - var keyword = 'research on learning'
+  - var suffix = 'research'
+
+block content
+  section.article-content.section._wrap
+    p.text-intro.text-intro--main.
+      Help us to learn about the ways you are learning. The adult education survey below covers adults' participation in education and training (formal, non-formal and informal learning). We encourage you to be honest in your answers. We do believe in Lifelong learning concept. Lifelong learning encompasses all learning activities undertaken throughout life with the aim of improving knowledge, skills and competences, within personal, civic, social or employment-related perspectives. The intention or aim to learn is the critical point that distinguishes these activities from non-learning activities, such as cultural or sporting activities.
+
+    .article-content__chapter.chapter#00
+      h2.article-content__title Survey
+      form.form(action='research.html' method='post' oninput=`courseOutput.value = courseInput.value + '%'`)
+        fieldset.fieldset.chapter#01
+          legend.legend Part 1: Your background
+          .form-question
+            label.label.label-paragraph(for='edu-experience') During the last 12 months have you participated in (check all appropriate options with Ctrl key):
+            select.select#edu-experience(name='edu-experience' size='7' multiple required)
+              option.option(value='formal') higher/professional educational program
+              option.option(value='course') any course: language, PC, driver, leadership, cooking, etc.
+              option.option(value='seminars') professional workshops or seminars
+              option.option(value='training') training from an instructor or colleague in your usual work
+
+          .form-question
+            p.label-paragraph Which of the descriptions below best suits your current status?
+            input.input-radio#status1(type='radio' name='status' value='Employed')
+            label.label.label--span.label--radio(for='status1') Employed
+            input.input-radio#status2(type='radio' name='status' value='Unemployed')
+            label.label.label--span.label--radio(for='status2') Unemployed
+            input.input-radio#status3(type='radio' name='status' value='Student')
+            label.label.label--span.label--radio(for='status3') Student
+            input.input-radio#status4(type='radio' name='status' value='Pensioner, aged')
+            label.label.label--span.label--radio(for='status4') Pensioner, aged
+            input.input-radio#status5(type='radio' name='status' value='Working at home')
+            label.label.label--span.label--radio(for='status5') Working at home
+            input.input-radio#status6(type='radio' name='status' value='Other')
+            label.label.label--span.label--radio(for='status6') Other
+
+          .form-question
+            label.label.label--paragraph(for='edu-completed') What is the highest level of education your father/mother (male/female guardian) has completed? What is your highest completed education?
+            select.select#edu-completed(name='edu-completed' value='Employed' size='7' required)
+              optgroup.optgroup(label='FATHER')
+                option.option No completed education
+                option.option Elementary Education
+                option.option High school/college
+                option.option Tertiary education
+              optgroup.optgroup(label='MOTHER')
+                option.option No completed education
+                option.option Elementary Education
+                option.option High school/college
+                option.option Tertiary education
+              optgroup.optgroup(label='YOU')
+                option.option No completed education
+                option.option Elementary Education
+                option.option High school/college
+                option.option Tertiary education
+
+          .form-question
+            label.label.label--span(for='year-completed') What year was this education completed?
+            input.input-form.input-form--number(type= 'number' id= 'year-completed' name= 'year-completed' min='1900' max='2023' required)
+
+        fieldset.fieldset.chapter#02
+          legend.legend Part 2: Formal education
+          .form-question
+            label.label.label--paragraph(for='major-field') Can you provide the major field of study for this education?
+            textarea.textarea#major-field(name= 'major-field' rows='5' maxlength='200' required) E.g. biology, economics, veterinary, auxiliary nursing, dental health, enforcement, early childhood education, journalism, statistics, IT, drama, building and construction, architecture, marketing, physics, hotel management, etc.
+
+          .form-question
+            p.label--paragraph What degree did you complete?
+            input.input-checkbox#degree1(type= 'checkbox' name= 'degree' value='Bachelor, Cand mag.')
+            label.label.label--checkbox(for='degree1') Bachelor, Cand mag.
+            input.input-checkbox#degree2(type= 'checkbox' name= 'degree' value='Masters, graduate')
+            label.label.label--checkbox(for='degree2') Masters, graduate
+            input.input-checkbox#degree3(type= 'checkbox' name= 'degree' value='Doctorate/research degree')
+            label.label.label--checkbox(for='degree3') Doctorate/research degree
+            input.input-checkbox#degree4(type= 'checkbox' name= 'degree' value='None')
+            label.label.label--checkbox(for='degree4') None
+
+          .form-question
+            label.label(for='edu-reason') Were there any of the following reasons why you participated in it?
+            select.select#edu-reason(name='edu-reason' size='7' multiple required)
+              option.option(value='reason1') To do the job better/improve career prospects
+              option.option(value='reason2') To increase the possibility of getting a job or changing jobs/profession
+              option.option(value='reason3') To start your own business
+              option.option(value='reason4') Because I was required to attend
+              option.option(value='reason5') For increased my general knowledge and personal development
+              option.option(value='reason6') To obtain a certificate or certification
+              option.option(value='reason7') To meet new people and / or have fun
+
+        fieldset.fieldset.chapter#03
+          legend.legend Part 3: Informal learning
+          .form-question
+            label.label.label--paragraph(for='course-field') What were the last courses' / workshops' topics taken by you during last 12 months?
+            textarea.textarea#course-field(name= 'course-field' rows='5' maxlength='200' required) E.g. language courses, computer courses, driver training, leadership courses, cooking classes, courses in gardening or painting courses
+
+          .form-question
+            p.label--paragraph How much time did you dedicate to this informal learning overall? Please do not include the hours spent on self-study, assignments or equivalent. Please choose to fill in days / hours.
+            input.input-form.input-form--number#course-months(type='number' name='course-months')
+            label.label.label--span(for='course-months') months
+            input.input-form.input-form--number#course-days(type='number' name='course-days')
+            label.label.label--span(for='course-days') days
+            input.input-form.input-form--number#course-hours(type='number' name='course-hours')
+            label.label.label--span(for='course-hours') hours
+
+          .form-question
+            p.label--paragraph To what extend have you already implemented skills and knowledge gained from it into practice?
+            label.label.label--span(for='course-use') Your effectiveness level:
+            input.range#course-use(type='range' name='courseInput' min='0' max='100' step='10')
+            output.output-form(name='courseOutput')
+
+          .form-question
+            p.label--paragraph Did the fact that you participated in those trainings led to... (select all the options that apply)
+            input.input-checkbox#benefit1(type= 'checkbox' name= 'degree' value='Getting a new job')
+            label.label.label--checkbox(for='benefit1') Getting a new job
+            input.input-checkbox#benefit2(type= 'checkbox' name= 'degree' value='Promoted in a job you have or had')
+            label.label.label--checkbox(for='benefit2') Promoted in a job you have or had
+            input.input-checkbox#benefit3(type= 'checkbox' name= 'degree' value='A higher salary')
+            label.label.label--checkbox(for='benefit3') A higher salary
+            input.input-checkbox#benefit4(type= 'checkbox' name= 'degree' value='New tasks in a job you have or had')
+            label.label.label--checkbox(for='benefit4') New tasks in a job you have or had
+            input.input-checkbox#benefit5(type= 'checkbox' name= 'degree' value='Better performance in current job')
+            label.label.label--checkbox(for='benefit5') Better performance in current job
+            input.input-checkbox#benefit6(type= 'checkbox' name= 'degree' value='Increased your general knowledge and personal development')
+            label.label.label--checkbox(for='benefit6') Increased your general knowledge and personal development
+
+        fieldset.fieldset.chapter#04
+          legend.legend Part 4: Use of computers
+          .form-question
+            span.label--span How many hours do you spend on computer usage for your learning on a DAILY basis?
+            input.input-form.input-form--number#pc-time(type='number' name='pc-hours' min='0' max='24' step='1')
+            label.label.label--span(for='pc-time') hours
+
+          .form-question
+            label.label(for='pc-tools') What kind of digital tools do you use during your learning activities? (select all the options that apply with Ctrl)
+            select.select#pc-tools(name='pc-tools' size='7' multiple required)
+              optgroup.optgroup(label='PRODUCT SOFTWARE')
+                option.option(checked) Word Processing
+                option.option Database
+                option.option Spreadsheet /Excel™
+                option.option Draw/Paint/Graphics
+                option.option Presentation /MS PowerPoint™
+                option.option Planning, concept mapping
+                option.option Internet search /Browsers
+                option.option Communications /Email, chats
+              optgroup.optgroup(label='EDUCATIONAL SOFTWARE')
+                option.option(checked) Drill/Practice/Tutorial
+                option.option Problem Solving
+                option.option Process Tools
+                option.option Tests
+
+          .form-question
+            p.label--paragraph In your opinion, using digital devices (desktop computers, portable computers and tablets) and the Internet for learning leads to the following effects:
+            input.input-checkbox#effect1(type= 'checkbox' name= 'effect' value='Makes you feel more willing to learn new things')
+            label.label.label--checkbox(for="effect1") Makes you feel more willing to learn new things
+            input.input-checkbox#effect2(type= 'checkbox' name= 'effect' value='Distracts you from the actual learning or homework')
+            label.label.label--checkbox(for="effect2") Distracts you from the actual learning or homework
+            input.input-checkbox#effect3(type= 'checkbox' name= 'effect' value='A higher salary')
+            label.label.label--checkbox(for="effect3") A higher salary
+            input.input-checkbox#effect4(type= 'checkbox' name= 'effect' value='Helps you find information or materials that you would otherwise not access')
+            label.label.label--checkbox(for="effect4") Helps you find information or materials that you would otherwise not access
+            input.input-checkbox#effect5(type= 'checkbox' name= 'effect' value='Does not change your learning in any way')
+            label.label.label--checkbox(for="effect5") Does not change your learning in any way
+
+        fieldset.fieldset.chapter#05
+          legend.legend Part 7: Personal information
+          .form-question
+            span.span-form Your gender:
+            input.input-radio#male(type='radio' name='status' value='Male')
+            label.label.label--radio(for='male') Male
+            input.input-radio#female(type='radio' name='status' value='Female')
+            label.label.label--radio(for='female') Female
+
+          .form-question
+            label.label.label--span(for='age') Your date of birth:
+            input.input-date#age(type='date' name='age' pattern="\d{4}-\d{2}-\d{2}" required)
+
+          .form-question
+            span.span-form Your marital status:
+            input.input-radio#married(type='radio' name='marriage' value='Married' required)
+            label.label.label--radio(for='married') Married
+            input.input-radio#single(type='radio' name='marriage' value='Single')
+            label.label.label--radio(for='single') Single
+            input.input-radio#divorced(type='radio' name='marriage' value='Divorced')
+            label.label.label--radio(for='divorced') Divorced
+            input.input-radio#widowed(type='radio' name='marriage' value='Widowed')
+            label.label.label--radio(for='widowed') Widowed
+
+          .form-question
+            label.label.label--span(for='members') How many members is your household (including yourself)?
+            input.input-form.input-form--number#members(type='number' name='members'  min='1' max='100' value='1' required)
+
+          .form-question
+            label.label.label--span(for='date') Current date and local time:
+            input.input-date#date(type='datetime-local' name='members' required)
+
+        .button__box--form
+          button.button.button--form.button--submit(type="submit") Submit your answers
+          button.button.button--form.button--reset(type="reset") Reset all
+
+
+    section.article-content__chapter.chapter#06
+      h2.article-content__title Concepts and definitions
+      p.text-intro
+      dl.term-list.term-list--main
+        dt.term.term--main Adult learning
+        dd.definition.definition--main refers to the participation of adults in lifelong learning. Adult learning usually refers to learning activities after the end of initial education.
+      dl.term-list.term-list--main
+        dt.term.term--main Learning activities
+        dd.definition.definition--main are any activities of an individual organised with the intention to improve his/her knowledge, skills, and competences. They are a deliberate search for knowledge, skills or competences and they are organised in some way, i.e. the learning is planned in a pattern or sequence with explicit or implicit aims. Random learning is excluded.
+
+      .note Three broad categories of learning activities - formal, non-formal and informal - are defined in the International Standard Classification of Education 2011. One fundamental criterion to distinguish formal and non-formal education and training from informal learning is that for the latter, the learning activities are not institutionalised. Institutionalised learning activities occur where there is "an organisation [which] provides structured educational arrangements, such as student-teacher relationships and/or interactions, that are specially designed for education and training".
+      ul.list
+        li.item-list #[span.accent Formal education and training] is defined as "education that is institutionalised, intentional and planned through public organisations and recognised private bodies and - in their totality - constitute the formal education system of a country. Formal education programmes are thus recognised as such by the relevant national education authorities or equivalent authorities, e.g. any other institution in cooperation with the national or sub-national education authorities. Formal education consists mostly of initial education. Vocational education, special needs education and some parts of adult education are often recognised as being part of the formal education system."
+        li.item-list #[span.accent Non-formal education] and training is defined as "education that is institutionalised, intentional and planned by an education provider. The defining characteristic of non-formal education is that it is an addition, alternative and/or complement to formal education within the process of the lifelong learning of individuals. It is often provided to guarantee the right of access to education for all. It caters to people of all ages but does not necessarily apply a continuous pathway-structure; it may be short in duration and/or low-intensity, and it is typically provided in the form of short courses, workshops or seminars. Non-formal education mostly leads to qualifications that are not recognised as formal or equivalent to formal qualifications by the relevant national or sub-national education authorities or to no qualifications at all. Non-formal education can cover programmes contributing to adult and youth literacy and education for out-of-school children, as well as programmes on life skills, work skills, and social or cultural development." (ISCED 2011) In short, non-formal education and training covers institutionalised taught learning activities outside the formal education system.
+        li.item-list #[span.accent Informal learning] is defined as "forms of learning that are intentional or deliberate, but are not institutionalised. It is consequently less organized and less structured than either formal or non-formal education. Informal learning may include learning activities that occur in the family, workplace, local community and daily life, on a self-directed, family-directed or socially-directed basis".

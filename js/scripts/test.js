@@ -56,8 +56,6 @@ const renderTest = () => {
 
   const countScore = (array_inputs, array_choices) => {
     let sum = 0;
-    console.log(array_inputs);
-    console.log(array_choices);
 
     for (let i = 0; i < array_inputs.length; i++) {
       const id = parseInt(array_inputs[i].id, 10);
@@ -66,7 +64,6 @@ const renderTest = () => {
       }
     }
 
-    console.log(sum);
     return sum;
   };
 

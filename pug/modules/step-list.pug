@@ -5,4 +5,4 @@
 .more-block__buttons
   a.button(href="index.html#articles") Learn
   a.button(href="index.html#quotes") Inspire
-  a.button(href="research.html") Share
+  a.button(href=pageClass === "research-page" ? "test.html" : "research.html")=pageClass === "research-page" ? 'Test' : 'Share'

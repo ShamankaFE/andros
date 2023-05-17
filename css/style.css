@@ -144,7 +144,7 @@ td {
   vertical-align: baseline;
 }
 
-div::-moz-selection, a::-moz-selection, p::-moz-selection, span::-moz-selection, li::-moz-selection, input::-moz-selection, button::-moz-selection, dd::-moz-selection, dt::-moz-selection {
+div::-moz-selection, a::-moz-selection, p::-moz-selection, span::-moz-selection, li::-moz-selection, input::-moz-selection, button::-moz-selection, dd::-moz-selection, dt::-moz-selection, input::-moz-selection, label::-moz-selection {
   color: rgb(255, 255, 255) !important;
   background-color: rgb(0, 0, 0) !important;
 }
@@ -157,7 +157,9 @@ li::selection,
 input::selection,
 button::selection,
 dd::selection,
-dt::selection {
+dt::selection,
+input::selection,
+label::selection {
   color: rgb(255, 255, 255) !important;
   background-color: rgb(0, 0, 0) !important;
 }
@@ -600,7 +602,7 @@ body {
   background-color: rgb(189, 18, 32);
 }
 .button--reset {
-  border: grey;
+  border: 2px solid grey;
   color: grey;
 }
 .button--reset:hover, .button--reset:active, .button--reset:focus {
@@ -805,7 +807,7 @@ body {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  max-height: 400px;
+  max-height: 440px;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
@@ -1071,6 +1073,17 @@ body {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.5))), url("../img/article_test.jpg");
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_test.jpg");
   background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_test.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.article-header--research {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.5))), url("../img/article_research.jpg");
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_research.jpg");
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("../img/article_research.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2539,6 +2552,222 @@ caption {
   height: 100%;
   top: 0;
   left: 0;
+}
+
+.fieldset {
+  padding: 10px;
+  border: 2px solid rgb(189, 18, 32);
+  border-radius: 10px;
+  padding: 48px 24px;
+  padding-top: 88px;
+}
+.fieldset:not(:last-of-type) {
+  margin-bottom: 112px;
+}
+
+.legend {
+  font-size: 1.2rem;
+  color: rgb(189, 18, 32);
+  padding: 8px 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.form-question {
+  display: block;
+  position: relative;
+  margin-bottom: 32px;
+  color: rgb(0, 0, 0);
+}
+
+.label {
+  display: block;
+  color: rgb(0, 0, 0);
+  padding: 8px 0;
+}
+.label--span {
+  display: inline;
+  margin-right: 16px;
+}
+.label--checkbox, .label--radio {
+  cursor: pointer;
+  display: block;
+  padding: 8px;
+  padding-left: 32px;
+}
+.label--checkbox::before, .label--radio::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: 0;
+  left: -12px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid grey;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.label--radio {
+  display: inline;
+}
+.label--radio::before {
+  content: "";
+  border-radius: 50%;
+}
+.label--checkbox, .label--radio {
+  color: grey;
+}
+.label--checkbox:hover, .label--radio:hover {
+  color: rgb(189, 18, 32);
+}
+
+.input-form,
+.select,
+.option,
+.textarea,
+.input-date {
+  padding: 8px 16px;
+  font-size: 1rem;
+  color: grey;
+}
+
+.input-checkbox,
+.input-radio {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.input-checkbox:focus + .label,
+.input-radio:focus + .label {
+  border: 1px dotted rgb(189, 18, 32);
+  border-radius: 8px;
+  width: 100%;
+}
+.input-checkbox:checked + label::before,
+.input-radio:checked + label::before {
+  background-color: rgb(189, 18, 32);
+  -webkit-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+}
+.input-checkbox:checked + label,
+.input-radio:checked + label {
+  color: rgb(189, 18, 32);
+  font-size: 1.1rem;
+}
+
+.input-date {
+  border-radius: 8px;
+  background-color: rgba(128, 128, 128, 0.5);
+  color: rgb(255, 255, 255);
+}
+
+.input-form--number {
+  border: 2px solid rgb(189, 18, 32);
+  border-radius: 8px;
+  max-width: 100px;
+  color: rgb(189, 18, 32);
+}
+
+.textarea {
+  width: 100%;
+  border: 1px dotted rgb(189, 18, 32);
+  border-radius: 8px;
+  font-style: italic;
+  resize: vertical;
+}
+.textarea:hover {
+  border: 2px solid rgb(189, 18, 32);
+}
+
+.select {
+  min-width: 100%;
+  border: 1px dotted rgb(189, 18, 32);
+  border-radius: 8px;
+}
+.select:hover {
+  border: 2px solid rgb(189, 18, 32);
+}
+
+.optgroup {
+  color: rgb(189, 18, 32);
+}
+
+.option {
+  overflow-wrap: anywhere;
+}
+.option:hover, .option:focus, .option:active, .option:target {
+  background-color: rgb(189, 18, 32);
+  color: rgb(255, 255, 255);
+}
+.option:checked {
+  background-color: rgb(189, 18, 32);
+  color: rgb(255, 255, 255);
+}
+
+.range {
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 10rem;
+  margin-right: 16px;
+}
+.range::-webkit-slider-runnable-track {
+  background: lightgrey;
+  height: 0.6rem;
+  border-radius: 8px;
+}
+.range::-moz-range-track {
+  background-color: lightgrey;
+  height: 0.6rem;
+  border-radius: 8px;
+}
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -4px;
+  background-color: rgb(189, 18, 32);
+  height: 1.1rem;
+  width: 1.1rem;
+  border-radius: 50%;
+}
+.range:focus {
+  outline: none;
+}
+.range:focus::-webkit-slider-thumb {
+  border: 1px solid grey;
+  outline: 3px solid grey;
+  outline-offset: 0.125rem;
+}
+.range:focus::-moz-range-thumb {
+  border: 1px solid grey;
+  outline: 3px solid grey;
+  outline-offset: 0.125rem;
+}
+
+.output-form {
+  color: rgb(189, 18, 32);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.button__box--form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 64px;
+}
+
+.button--form {
+  font-size: 1rem;
+}
+.button--form:not(:last-of-type) {
+  margin-right: 32px;
 }
 
 .video {

@@ -169,7 +169,9 @@ li,
 input,
 button,
 dd,
-dt {
+dt,
+input,
+label {
   &::selection {
     color: $white !important;
     background-color: $black !important;
@@ -407,7 +409,7 @@ body {
   }
 
   &--reset {
-    border: grey;
+    border: 2px solid grey;
     color: grey;
     &:hover,
     &:active,
@@ -564,6 +566,10 @@ body {
 
 .article-header--test {
   @include imageHeader(url("../img/article_test.jpg"));
+}
+
+.article-header--research {
+  @include imageHeader(url("../img/article_research.jpg"));
 }
 
 .article-header__title {
@@ -1187,6 +1193,7 @@ body {
 @import "scss/collapse";
 @import "scss/test";
 @import "scss/modal";
+@import "scss/research";
 
 .video {
   max-width: 100%;
