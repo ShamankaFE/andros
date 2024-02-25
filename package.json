@@ -1,11 +1,11 @@
 {
 	"name": "andros",
 	"version": "1.0.0",
-	"description": "",
+	"description": "My first EduTech website",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-    "pug": "pug ./pug/pages/ --pretty -w -o ./"
+		"pug": "pug ./pug/pages/ --pretty -w -o ./"
 	},
 	"repository": {
 		"type": "git",
@@ -19,5 +19,12 @@
 	"homepage": "https://github.com/ShamankaFE/Andros#readme",
 	"dependencies": {
 		"pug": "^3.0.2"
+	},
+	"devDependencies": {
+		"eslint": "^8.42.0",
+		"eslint-config-standard": "^17.1.0",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-n": "^16.0.0",
+		"eslint-plugin-promise": "^6.1.1"
 	}
 }

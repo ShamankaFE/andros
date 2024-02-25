@@ -161,7 +161,6 @@ const renderTest = () => {
         cellLevel.classList.add('very-low');
         break;
     }
-
   };
 
   const inputs = testForm.querySelectorAll('.checkbox__input');
